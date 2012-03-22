@@ -1,0 +1,7 @@
+<div id="sb-slider" class="sb-slider">
+  <% @page.images.each do |i| %>
+      <%= image_tag(i.thumbnail("900x600").url) %>
+  <% end %>
+</div>
+<%= render '/refinery/content_page' %>
+

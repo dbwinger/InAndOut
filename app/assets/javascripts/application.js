@@ -12,4 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.easing.1.3
+//= require jquery.slicebox
 //= require_tree .
+
+$(function() {
+    $('.sb-slider').slicebox();
+});
+

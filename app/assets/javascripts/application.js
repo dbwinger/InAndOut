@@ -17,6 +17,6 @@
 //= require_tree .
 
 $(function() {
-    $('.sb-slider').slicebox();
+    $('.sb-slider').slicebox({"slideshow" : true, "speed3d" : 1200, "speed" : 1200, "orientation" : "h"});
 });
 

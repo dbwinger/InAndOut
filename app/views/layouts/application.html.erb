@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body class="default-skin">
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="container">
+      	<!-- background holder -->
+    	<div class="background_pic_border">
+		    <!-- background image -->
+		    <div class="background_pic_holder">
+			    <%= image_tag "assets/background.jpg", :width=>"100%", :alt=>"" %>
+		    </div>
+
+		    <!-- background curv graphic -->
+		    <div class="back-curv"></div>
+	    </div>
+	    <!-- end div .background image -->
+
+	    <!-- wrapper -->
+	    <div id="wrapper">
+        <!-- sidebar -->
+		    <div id="sidebar">
+			    <div class="sidebar_top"></div><!-- curv for sidebar top -->
+
+			    <!-- sidebar contents -->
+			    <div class="sidebar_content">
+
+				    <!-- logo -->
+				    <div id="logo">
+              <%= link_to refinery.root_path do %>
+                <%= image_tag "logo.png", :alt => "In & Out Cleaning Services logo", :class => "png" %>
+              <%end%>
+				    </div>
+				    <!-- / end logo -->
+
+				    <div class="clear"></div>
+
+				    <!-- Navigation -->
+				    <%= render(:partial => "/refinery/menu", :locals => {
+                 :dom_id => 'navigation',
+                 :css => 'menu'
+               }) %>
+
+				    <!-- Contact Info Widget -->
+				    <div class="box widget">
+
+					    <!-- widget title-->
+					    <h4>GET IN TOUCH</h4>
+
+					    <!-- info list -->
+					    <ul class="contact_list">
+						    <li class="home">63739 street lorem ipsum City, Country</li>
+						    <li class="phone">+1 123 312 32 23</li>
+						    <li class="fax">+1 123 312 32 23</li>
+						    <li class="mail"><a href="mailto:info@company.com">info@company.com</a></li>
+						    <li class="help"><a href="mailto:support@company.com">support@company.com</a></li>
+					    </ul>
+				    </div>
+				    <!-- / Contact Info Widget -->
+
+				    <!-- Twitter Feeds Widget -->
+				    <div class="box dynamic_sidebar widget">
+					    <!-- widget title-->
+					    <h4>TWITTER FEEDS</h4>
+
+					    <!-- tweet list-->
+					    <div class="tweet_list"></div>
+				    </div>
+				    <!-- / Twitter Feeds Widget -->
+
+				    <!-- Social Media Icons -->
+				    <div class="box">
+					    <ul class="social_media_icons">
+						    <li><a href="mailto:info@conpany.com" class="j_ttip" title="Email"><%= image_tag "assets/social_media/icon-email.png" %></a></li>
+						    <li><a href="Twitter link" class="j_ttip" title="Twitter"><%= image_tag "assets/social_media/icon-twitter.png" %></a></li>
+						    <li><a href="Facebook link" class="j_ttip" title="Facebook"><%= image_tag "assets/social_media/icon-facebook.png" %></a></li>
+					    </ul>
+				    </div>
+				    <!-- / Social Media Icons -->
+
+				    <div class="clear"></div>
+
+			    </div>
+			    <!--/ end div .sidebar contents -->
+
+			    <div class="sidebar_bottom"></div><!-- curv for sidebar bottom -->
+		    </div>
+		    <!--/ end div #sidebar -->
+
+		      <!-- content wrapper -->
+		      <div id="content">
+        		<section id="page">
+              <%= yield %>
+            </section>
+		      </div>
+
+		      <div class="clear"></div>`
+	    </div>
+    	<!-- /end div #wrapper -->
+
+	    <!-- footer -->
+	    <div id="footer">
+	      <footer>
+          <%= render '/refinery/footer' -%>
+        </footer>
+	    </div>
+    	<!-- / end div #footer -->
+    </div>
+    <!-- end div #container -->
+    <%= render '/refinery/javascripts' %>
+  </body>
+</html>
+

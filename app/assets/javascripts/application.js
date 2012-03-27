@@ -12,11 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.easing.1.3
-//= require jquery.slicebox
-//= require_tree .
 
-$(function() {
-    $('.sb-slider').slicebox({"slideshow" : true, "speed3d" : 1200, "speed" : 1200, "orientation" : "h"});
-});
+// From ThemeForest theme
+// TODO: Check if all of these are actually used.
+//= require jquery.easing.1.3
+//= require jquery.cycle.all.min
+//= require jquery.tools.min
+//= require jquery.prettyPhoto
+//= require menu_min
+//= require colortip-1.0-jquery
+//= require jquery.popeye-2.0.4.min
+//= require jquery.validate
+//= require jquery.form
+//= require jquery.tweet
+//= require jquery.nivo.slider.pack
+//= require script
+
+// END from ThemeForest theme
+
+//= require_tree .
 

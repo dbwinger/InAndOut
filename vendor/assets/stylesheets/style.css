@@ -271,12 +271,12 @@
 	}
 
 	/* current page items and hover states */
-	#navigation a:hover, #navigation ul li.current_page_item a, #navigation ul li.current-menu-ancestor a{
+	#navigation a:hover, #navigation ul li.selected a, #navigation ul li.current-menu-ancestor a{
 		color:#9D9D9D;
 	}
 
 	/* current page items and hover states */
-	#navigation ul li.current_page_item a:hover, #navigation ul li.current-menu-ancestor a:hover{
+	#navigation ul li.selected a:hover, #navigation ul li.current-menu-ancestor a:hover{
 		color:#fff;
 	}
 
@@ -3375,7 +3375,7 @@ body.red-skin #footer  a:hover{color:#ac4f35;}
 body.red-skin .blog .date {color:#ac4f35;}
 body.red-skin .widget .recent_posts .date{color:#ac4f35;border:1px solid #ac4f35;}
 body.red-skin .sidebar_content .widget .recent_posts .date{background-color:#876e6e; border:0 !important;}
-body.red-skin 	#navigation a:hover, body.red-skin #navigation li.current_page_item a{color:#876e6e;}
+body.red-skin 	#navigation a:hover, body.red-skin #navigation li.selected a{color:#876e6e;}
 body.red-skin #navigation ul a:hover{color:#B47F7D;}
 body.red-skin 	#navigation ul ul li a{color:#876e6e;}
 
@@ -3443,7 +3443,7 @@ body.green-skin #footer  a:hover{color:#7d8a26;}
 body.green-skin .blog .date {color:#7d8a26;}
 body.green-skin .widget .recent_posts .date{color:#7d8a26;border:1px solid #7d8a26;}
 body.green-skin .sidebar_content .widget .recent_posts .date{background-color:#7d8a26; border:0 !important;}
-body.green-skin 	#navigation a:hover, body.green-skin #navigation li.current_page_item a{color:#686e58;}
+body.green-skin 	#navigation a:hover, body.green-skin #navigation li.selected a{color:#686e58;}
 body.green-skin 	#navigation ul a:hover{color:#BEC8A2;}
 body.green-skin 	#navigation ul ul li a{color:#686e58;}
 /* popeye slider */
@@ -3509,7 +3509,7 @@ body.blue-skin #footer  a:hover{color:#6599bf;}
 body.blue-skin .blog .date {color:#6599bf;}
 body.blue-skin .widget .recent_posts .date{color:#6599bf;border:1px solid #6599bf;}
 body.blue-skin .sidebar_content .widget .recent_posts .date{background-color:#768e9f; border:0 !important;}
-body.blue-skin 	#navigation a:hover, body.blue-skin #navigation li.current_page_item a{color:#768e9f;}
+body.blue-skin 	#navigation a:hover, body.blue-skin #navigation li.selected a{color:#768e9f;}
 body.blue-skin 	#navigation ul a:hover{color:#E1E3F3;}
 body.blue-skin 	#navigation ul ul li a{color:#768e9f;}
 /* popeye slider */

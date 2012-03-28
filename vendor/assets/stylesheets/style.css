@@ -53,10 +53,11 @@
 	GOOGLE FONTS
 ------------------------------------------------------- */
 
-	/* Oswald */
+
+    /* Oswald */
 	@import url(http://fonts.googleapis.com/css?family=Oswald);
 
-	/* Droid Sans */
+    /* Droid Sans */
 	@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
 	/* Droid Serif */
@@ -153,7 +154,7 @@
 
 	/* logo position */
 	#logo{
-		padding:40px 0;
+		padding:35px 0;
 		width:180px;
 	}
 

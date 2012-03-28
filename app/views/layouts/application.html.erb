@@ -51,7 +51,7 @@
 
 					    <!-- info list -->
 					    <ul class="contact_list">
-						    <li class="home"><%= copywriting("address").html_safe %></li>
+						    <li class="home"><%= (copywriting("address") || "").html_safe %></li>
 						    <li class="phone"><%= copywriting "phone" %></li>
 						    <li class="fax"><%= copywriting "fax" %></li>
 						    <li class="mail"><%= mail_to copywriting("email") %></li>

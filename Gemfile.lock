@@ -141,6 +141,7 @@ GEM
     refinerycms-authentication (2.0.2)
       devise (~> 2.0.0)
       refinerycms-core (= 2.0.2)
+    refinerycms-copywriting (2.0.0)
     refinerycms-core (2.0.2)
       acts_as_indexed (~> 0.7.7)
       awesome_nested_set (~> 2.1.0)
@@ -240,6 +241,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.2)
   refinerycms (~> 2.0.0)
+  refinerycms-copywriting
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
   refinerycms-page-images (~> 2.0.0)

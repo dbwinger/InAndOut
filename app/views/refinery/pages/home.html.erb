@@ -6,11 +6,6 @@
 	<link rel='stylesheet' id='theme-lte8-css'  href='css/ie.css' type='text/css' media='screen' />
 	<![endif]-->
 <%end%>
-<div class="slider_cover"></div><!-- cover for slider -->
-<div class="content_top"></div><!-- curv for content top -->
-
-<!-- content holder -->
-<div class="content">
 	<!-- slider area -->
 	<div class="slider-wrapper theme-default" id="slider">
 
@@ -47,149 +42,9 @@
 	<div class="clear"></div>
 
 	<!-- page contents -->
-	<%= render '/refinery/content_page' %>
-
-	<!-- box four first -->
-	<div class="box four first">
-		<div class="featured">
-			<!-- box title-->
-			<div class="title">
-				<h4><a href="about" title="ABOUT US">ABOUT US</a></h4>
-			</div>
-			<!-- / box title-->
-
-			<!-- text-->
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis lobortis gravida.
-
-				<!-- read more link-->
-				<a href="#" title="" class="read_more">read more →</a>
-			</p>
-			<!-- / text-->
-		</div>
-	</div>
-	<!-- / box -->
-
-	<!-- box four -->
-	<div class="box four">
-		<div class="featured">
-			<!-- box title-->
-			<div class="title">
-				<h4><a href="about" title="OUR PRODUCTS">OUR PRODUCTS</a></h4>
-			</div>
-			<!-- / box title-->
-
-			<!-- text-->
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis lobortis gravida.
-
-				<!-- read more link-->
-				<a href="#" title="" class="read_more">read more →</a>
-			</p>
-			<!-- / text-->
-		</div>
-	</div>
-	<!-- / box -->
-
-	<!-- box four -->
-	<div class="box four">
-		<div class="featured">
-			<!-- box title-->
-			<div class="title">
-				<h4><a href="about" title="LATEST WORKS">LATEST WORKS</a></h4>
-			</div>
-			<!-- / box title-->
-
-			<!-- text-->
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis lobortis gravida.
-
-				<!-- read more link-->
-				<a href="#" title="" class="read_more">read more →</a>
-			</p>
-			<!-- / text-->
-		</div>
-	</div>
-	<!-- / box -->
-
-	<!-- box four last -->
-	<div class="box four last">
-		<div class="featured">
-			<!-- box title-->
-			<div class="title">
-				<h4><a href="about" title="OUR SERVICES">OUR SERVICES</a></h4>
-			</div>
-			<!-- / box title-->
-
-			<!-- text-->
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis lobortis gravida.
-
-				<!-- read more link-->
-				<a href="#" title="" class="read_more">read more →</a>
-			</p>
-			<!-- / text-->
-		</div>
-	</div>
-	<!-- / box -->
-
-
-	<div class="line"></div>
-
-	<!-- latest news -->
-	<div class="box two first widget">
-		<div class="featured">
-			<!-- widget title -->
-			<div class="title"><h4>LATEST NEWS</h4></div>
-
-			<div class="recent_posts classic">
-				<!-- post 1 -->
-				<ul><li class="date"><span class="day">23</span>Aug</li>
-					<li>
-						<!-- post title -->
-						<span class="title"><a href="#">Consectetur Adipiscing Elit</a></span>
-
-						<!-- post text -->
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non eleifend tellus. Ut dui ve...
-					</li>
-				</ul>
-				<!-- / post 1 -->
-
-				<!-- post 2 -->
-				<ul><li class="date"><span class="day">11</span>Sep</li>
-					 <li>
-						<!-- post title -->
-						 <span class="title"><a href="#">Cras Ipsum Diam</a></span>
-
-						 <!-- post text -->
-						 Lorem ipsum dolor sit amet, consectetur adipiscing elit....
-					</li>
-				</ul>
-				<!-- / post 2 -->
-			</div>
-		</div>
-	</div>
-	<!-- / latest news -->
-
-	<!-- testimonials -->
-	<div class="box two last widget">
-	    <div class="featured">
-			<!-- widget title -->
-		    <div class="title"><h4>TESTIMONIALS</h4></div>
-
-		    <!-- quote -->
-		    <blockquote><p>Donec eu aliquet nibh. Proin blandit auctor luctus. Donec rhoncus aliquet accumsan. Nunc volutpat rhoncus placerat. Quisque ultrices tempus pharetra. Donec laoreet sem vehicula purus sollicitudin feugiat. In egestas metus consectetur justo suscipit adipiscing. <span>John Doe, CEO Company Inc.</span></p></blockquote>
-	    </div>
-	</div>
-	<!-- / testimonials -->
+  <%= raw @page.content_for(:services) %>
 
 	<div class="clear"></div>
 
   <!-- / page contents -->
-
-</div>
-<!-- / end div .content -->
-
-<div class="content_bottom"></div><!-- curv for content bottom -->
-<!-- / end div #content-->
 

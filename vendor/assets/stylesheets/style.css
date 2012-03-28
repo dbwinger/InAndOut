@@ -53,16 +53,13 @@
 	GOOGLE FONTS
 ------------------------------------------------------- */
 
-
-    /* Oswald */
+/* Commenting out because has to be before any rules in file, and rails packages all into one file.  So it's put into application.css
 	@import url(http://fonts.googleapis.com/css?family=Oswald);
 
-    /* Droid Sans */
 	@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
-	/* Droid Serif */
 	@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
-
+*/
 /* ----------------------------------------------------
 	GLOBAL STRUCTURE
 ------------------------------------------------------- */

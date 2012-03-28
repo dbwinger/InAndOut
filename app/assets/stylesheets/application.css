@@ -10,6 +10,8 @@
  *
  *= require_self
 
+ * From Themeforest theme
+ * TODO: Check if all of these are actually used.
  *= require reset
  *= require style
  *= require prettyPhoto
@@ -17,6 +19,7 @@
  *= require jquery.popeye
  *= require colortip-1.0-jquery
  *= require nivo-slider
+ * END from Themeforest theme
 
  *= require_tree .
 */

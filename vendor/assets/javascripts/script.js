@@ -13,10 +13,6 @@
   var tweet_count = 1; //number of tweets to show
 
 
-  /* FLICKR */
-  var flickr_user_id = '36587311@N08'; //your flickr user id
-  var flickr_thumbnail_count = 4; //the thumbmail number to show
-
   /* CYCLE SLIDER */
   var rttheme_slider_timeout=7000; //miliseconds 7000 = 7 seconds
   var rttheme_slider_effect="fade";
@@ -54,7 +50,7 @@ jQuery(document).ready(function(){
 		jQuery(slider_area).cycle({
 			fx:     rttheme_slider_effect,  // Effect
 			timeout:  rttheme_slider_timeout,  // Timeout value (ms) = 4 seconds
-			easing: 'backout',
+			//easing: 'backout',
 			pager:  slider_buttons,
 			cleartype:  1,
 			after:   onAfter ,
@@ -188,9 +184,6 @@ jQuery(document).ready(function() {
 
 });
 
-
-
-
 //validate contact form
 jQuery(document).ready(function(){
 
@@ -219,7 +212,6 @@ jQuery(document).ready(function(){
               v.resetForm();
       });
  });
-
 
 //Slide to top
 jQuery(document).ready(function(){

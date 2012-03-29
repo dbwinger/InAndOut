@@ -60,16 +60,20 @@
 				    </div>
 				    <!-- / Contact Info Widget -->
 
-				    <!-- Twitter Feeds Widget -->
-				    <div class="box dynamic_sidebar widget">
-					    <!-- widget title-->
-					    <h4>TWITTER FEEDS</h4>
+            <% if copywriting "testimonial" %>
+              <div class="box dynamic_sidebar widget">
+					      <!-- widget title-->
+					      <h4>Testimonial</h4>
 
-					    <!-- tweet list-->
-					    <div class="tweet_list"></div>
-				    </div>
-				    <!-- / Twitter Feeds Widget -->
-
+					      <blockquote>
+						      <p>
+							      <%= copywriting "testimonial" %>
+							      <span><%= copywriting "testimonial-author"%></span>
+						      </p>
+					      </blockquote>
+					      <%= link_to "read more →", "/testimonials" %>
+				      </div>
+				    <%end%>
 				    <!-- Social Media Icons -->
 				    <div class="box">
 					    <ul class="social_media_icons">

@@ -6,6 +6,7 @@
 	<link rel='stylesheet' id='theme-lte8-css'  href='css/ie.css' type='text/css' media='screen' />
 	<![endif]-->
 <%end%>
+
 	<!-- slider area -->
 	<div class="slider-wrapper theme-default" id="slider">
 
@@ -42,8 +43,13 @@
 	<div class="clear"></div>
 
 	<!-- page contents -->
-  <%= raw @page.content_for(:services) %>
-
+	<div class="auto_columns">
+    <%= raw @page.content_for :row_1 %>
+  </div>
+  <div class="line"></div>
+  <div class="auto_columns">
+    <%= raw @page.content_for :row_2 %>
+  </div>
 	<div class="clear"></div>
 
   <!-- / page contents -->

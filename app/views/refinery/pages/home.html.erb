@@ -12,20 +12,20 @@
 
 		<!-- cycle slider -->
 		<div id="slider_area" class="cycle">
-    <% @page.images.each do |i| %>
+    <% @page.image_pages.each do |i| %>
 			<!-- slide -->
 			<div class="slide">
 				<!-- slide description -->
 				<div class="desc">
-					<!-- slide title -->
-					<span class="title"><%= i.title %></span>
 					<!-- slide text -->
-					<span class="text"> LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED U T CONGUE IPSUM. PHASELLUS A FELIS A <a href="#" title="">MASSA COMMODO</a> SOLLICITUDIN A SAGITTIS LOREM.</span>
+					<% unless i.caption.blank? %>
+  					<span class="text"><%= i.caption.html_safe %></span>
+					<%end%>
 				</div>
 				<!-- /slide description -->
 
 				<!-- slide background image -->
-				<%= image_tag i.thumbnail("600x400").url, :alt=>"" %>
+				<%= image_tag i.image.thumbnail("600x400").url, :alt=>"" %>
 
 			</div>
 			<!--/ slide -->

@@ -22,6 +22,7 @@ $(function() {
       read_more.attr("title", $(this).attr("title"));
       read_more.attr("href", $(this).attr("href"));
       $(this).parent().next().append(read_more);
+      // If there's an image (inside the <p>), wrap it with an anchor.
       $(this).parent().next().find("img").wrap("<a href='" + $(this).attr("href") + "'></a>");
     });
     // Surround "item" contents with divs as required by the framework.
@@ -37,8 +38,6 @@ $(function() {
     inner_divs.find("h3").each(function() {
         $(this).replaceWith("<h4>" + $(this).html() + "</h4>");
     });
-
-    inner_divs.find("img").css("width","96%");
   })
 });
 

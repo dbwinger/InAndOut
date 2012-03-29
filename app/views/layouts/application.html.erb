@@ -66,13 +66,14 @@
 					      <h4>Testimonial</h4>
 
 					      <blockquote>
-						      <p>
+						      <p style="padding:0">
 							      <%= copywriting "testimonial" %>
-							      <span><%= copywriting "testimonial-author"%></span>
+							      <span ><%= copywriting "testimonial-author"%></span>
 						      </p>
 					      </blockquote>
-					      <%= link_to "read more →", "/testimonials" %>
+					      <%= link_to "read more →", "/testimonials", :class => "read_more", :style => "padding:0; text-align:right" %>
 				      </div>
+				      <br/>
 				    <%end%>
 				    <!-- Social Media Icons -->
 				    <div class="box">

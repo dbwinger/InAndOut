@@ -32,3 +32,7 @@
 
 //= require_tree .
 
+$(function() {
+   $("#body_content_title").addClass("line");
+});
+

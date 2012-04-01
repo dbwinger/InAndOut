@@ -13,31 +13,34 @@ $(function() {
         case 3: return "three";
         case 4: return "four";
         case 5: return "five";
+        default: return "";
       }
     }();
-    // Add "read more" links
-    outer.children("h3").children("a").each(function() {
-      // If the title is a link, add the "read more" link at the end of the <p> with the same href.
-      var read_more = $("<a class='read_more'>read more →</a>");
-      read_more.attr("title", $(this).attr("title"));
-      read_more.attr("href", $(this).attr("href"));
-      $(this).parent().next().append(read_more);
-      // If there's an image (inside the <p>), wrap it with an anchor.
-      $(this).parent().next().find("img").wrap("<a href='" + $(this).attr("href") + "'></a>");
-    });
-    // Surround "item" contents with divs as required by the framework.
-    outer.children("h3").each(function(){
-        $(this).next().andSelf().wrapAll("<div class='box " + number_class + "'><div class='featured'></div></div>");
-    });
-    var inner_divs = outer.children("div.box");
-    // Add first and last classes
-    inner_divs.first().addClass("first");
-    inner_divs.last().addClass("last");
+    if (number_class != ""){
+        // Add "read more" links
+        outer.children("h3").children("a").each(function() {
+          // If the title is a link, add the "read more" link at the end of the <p> with the same href.
+          var read_more = $("<a class='read_more'>read more →</a>");
+          read_more.attr("title", $(this).attr("title"));
+          read_more.attr("href", $(this).attr("href"));
+          $(this).parent().next().append(read_more);
+          // If there's an image (inside the <p>), wrap it with an anchor.
+          $(this).parent().next().find("img").wrap("<a href='" + $(this).attr("href") + "'></a>");
+        });
+        // Surround "item" contents with divs as required by the framework.
+        outer.children("h3").each(function(){
+            $(this).next().andSelf().wrapAll("<div class='box " + number_class + "'><div class='featured'></div></div>");
+        });
+        var inner_divs = outer.children("div.box");
+        // Add first and last classes
+        inner_divs.first().addClass("first");
+        inner_divs.last().addClass("last");
 
-    // Now replace h3s with h4s, because refinery only lets you go down to h3, and h4s look better.
-    inner_divs.find("h3").each(function() {
-        $(this).replaceWith("<h4>" + $(this).html() + "</h4>");
-    });
+        // Now replace h3s with h4s, because refinery only lets you go down to h3, and h4s look better.
+        inner_divs.find("h3").each(function() {
+            $(this).replaceWith("<h4>" + $(this).html() + "</h4>");
+        });
+    }
   })
 });
 

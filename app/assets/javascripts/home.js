@@ -40,6 +40,13 @@ $(function() {
         inner_divs.find("h3").each(function() {
             $(this).replaceWith("<h4>" + $(this).html() + "</h4>");
         });
+        // Move images to before headings
+        inner_divs.each(function() {
+            var image = div.find("img").first()
+            if (image.length) {
+                $(this).prepend(image);
+            }
+        });
     }
   })
 });

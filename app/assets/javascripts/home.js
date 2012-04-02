@@ -42,7 +42,7 @@ $(function() {
         });
         // Move images to before headings
         inner_divs.each(function() {
-            var image = div.find("img").first()
+            var image = $(this).find("img").first()
             if (image.length) {
                 $(this).prepend(image);
             }

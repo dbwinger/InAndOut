@@ -119,9 +119,12 @@ $medium_color: #A57A45;
 		min-width:980px;
 		width:100%;
 		overflow:hidden;
-		max-height:600px;
+		/*max-height:600px;*/
 		text-align:center;
 		z-index:2;
+		/* Added by daryl */
+		height:600px;
+		background-color:#907055;
 	}
 
 	/* background image magin */
@@ -188,6 +191,7 @@ $medium_color: #A57A45;
 	/* sidebar content color */
 	.sidebar_content{
 		color:#cecece;
+		box-shadow: -8px 0px 12px -8px #111;
 	}
 
 	.sidebar_bottom{
@@ -206,6 +210,7 @@ $medium_color: #A57A45;
 	.content{
 		background:#fff;
 		padding:0 30px 1px 30px;
+		box-shadow: 8px -2px 12px -8px #111;
 	}
 
 	/* graphic cover for slider */

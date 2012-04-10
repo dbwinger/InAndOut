@@ -26,6 +26,7 @@
 //= require jquery.form
 //= require jquery.tweet
 //= require jquery.nivo.slider.pack
+//= require jquery.color
 //= require script
 
 // END from ThemeForest theme

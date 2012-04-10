@@ -32,6 +32,10 @@ $(function() {
             $(this).next().andSelf().wrapAll("<div class='box " + number_class + "'><div class='featured'></div></div>");
         });
         var inner_divs = outer.children("div.box");
+        $("div.box").hover(
+            function() { $(this).animate({"background-color" : "#FFFFC3"}); },
+            function() { $(this).animate({"background-color" : "#FFF"}); }
+        );
         // Add first and last classes
         inner_divs.first().addClass("first");
         inner_divs.last().addClass("last");

@@ -9,18 +9,35 @@ div.auto_columns p {
     padding-bottom: 2px;
 }
 #slider .desc span.text {
-    border-radius: 8px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
 }
 div.sidebar_content_top {
-    box-shadow: -8px 8px 12px -8px #111;
+    -webkit-box-shadow:  8px -2px 12px -8px #111;
+    -moz-box-shadow:  8px -2px 12px -8px #111;
+    box-shadow:  8px -2px 12px -8px #111;
 }
 div.sidebar_content_top {
-    border-radius: 0 0 4px 4px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;
 }
 
 #logo {
     padding: 20px 0px 0px 30px;
-    background: -webkit-linear-gradient(top, #fff 0%,#cdF 100%); /* Chrome10+,Safari5.1+ */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #c0e1ff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#c0e1ff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#c0e1ff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#c0e1ff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#c0e1ff 100%); /* IE10+ */
+    background: linear-gradient(top,  #ffffff 0%,#c0e1ff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c0e1ff',GradientType=0 ); /* IE6-9 */
 }
 #logo img {
     width:180px;
@@ -31,16 +48,24 @@ div.sidebar_content_top {
     font-size: 150%;
     text-align: center;
     color: #452A15;
-    border-radius: 0 0 2px 2px;
     border-top: solid 5px #fff;
     width: 100%;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;
+
 }
 
 div.clients {
-    border-radius: 8px;
     padding: 10px;
     border: solid 2px #ddd;
     background-color: #eee;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
 }
 div.clients ul {
     list-style: none !important;

@@ -161,14 +161,8 @@ $medium_color: #A57A45;
 
 	/* logo position */
 	#logo{
-		padding:25px 0;
-		width:174px;
-	}
-	#logo img {
-		-moz-border-radius: 10px;
-		-webkit-border-radius: 10px;
-		border-radius: 10px;
-		border: solid 3px #ccc;
+//		padding:25px 0;
+//		width:174px;
 	}
 
 	/* sidebar */
@@ -180,7 +174,7 @@ $medium_color: #A57A45;
 
 	.sidebar_top{
 		margin:8px 0 0 0;
-		background:url(skin-default.png) left 0px no-repeat;
+		background:url(skin-custom.png) left 0px no-repeat;
 		height:26px;
 		display:block;
 	}
@@ -188,13 +182,16 @@ $medium_color: #A57A45;
 	/* sidebar background color */
 	.sidebar_content{
 		background:#343434;
-		padding:0 30px;
+		padding:15px 30px 0 30px;
+	    border-radius: 4px 4px 0 0;
+        margin-top: 18px;
+        box-shadow: -8px 0px 12px -8px #111;
+
 	}
 
 	/* sidebar content color */
 	.sidebar_content{
 		color:#cecece;
-		box-shadow: -8px 0px 12px -8px #111;
 	}
 
 	.sidebar_bottom{
@@ -307,7 +304,7 @@ $medium_color: #A57A45;
 
 	/* First Level */
 	#navigation > ul{
-		background:url(transparent-pixel.png) top repeat-x;
+		//background:url(transparent-pixel.png) top repeat-x;
 	}
 
 	#navigation > ul > li{

@@ -11,4 +11,51 @@ div.auto_columns p {
 #slider .desc span.text {
     border-radius: 8px;
 }
+div.sidebar_content_top {
+    box-shadow: -8px 8px 12px -8px #111;
+}
+div.sidebar_content_top {
+    border-radius: 0 0 4px 4px;
+}
+
+#logo {
+    padding: 20px 0px 0px 30px;
+    background: -webkit-linear-gradient(top, #fff 0%,#cdF 100%); /* Chrome10+,Safari5.1+ */
+}
+#logo img {
+    width:180px;
+}
+#tagline {
+    padding: 10px 0px;
+    background-color: #E6D391;
+    font-size: 150%;
+    text-align: center;
+    color: #452A15;
+    border-radius: 0 0 2px 2px;
+    border-top: solid 5px #fff;
+    width: 100%;
+}
+
+div.clients {
+    border-radius: 8px;
+    padding: 10px;
+    border: solid 2px #ddd;
+    background-color: #eee;
+}
+div.clients ul {
+    list-style: none !important;
+    background-color: #aaa;
+}
+div.clients ul li {
+    float:left;
+    list-style-position: outside !important;
+    margin: 0 6px;
+    height: 65px;
+    width: 184px;
+    text-align: center;
+    line-height: 65px;
+}
+div.clients ul li img {
+    vertical-align: middle;
+}
 

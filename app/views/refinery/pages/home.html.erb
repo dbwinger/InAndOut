@@ -6,50 +6,53 @@
 	<link rel='stylesheet' id='theme-lte8-css'  href='css/ie.css' type='text/css' media='screen' />
 	<![endif]-->
 <%end%>
-	<!-- slider area -->
-	<div class="slider-wrapper theme-default" id="slider">
+<!-- slider area -->
+<div class="slider-wrapper theme-default" id="slider">
 
-		<!-- cycle slider -->
-		<div id="slider_area" class="cycle">
-    <% @page.image_pages.each do |i| %>
-			<!-- slide -->
-			<div class="slide">
-				<!-- slide description -->
-				<div class="desc">
-					<!-- slide text -->
-					<% unless i.caption.blank? %>
-  					<span class="text"><%= i.caption.html_safe %></span>
-					<%end%>
-				</div>
-				<!-- /slide description -->
-
-				<!-- slide background image -->
-				<%= image_tag i.image.thumbnail("600x400").url, :alt=>"" %>
-
+	<!-- cycle slider -->
+	<div id="slider_area" class="cycle">
+  <% @page.image_pages.each do |i| %>
+		<!-- slide -->
+		<div class="slide">
+			<!-- slide description -->
+			<div class="desc">
+				<!-- slide text -->
+				<% unless i.caption.blank? %>
+					<span class="text"><%= i.caption.html_safe %></span>
+				<%end%>
 			</div>
-			<!--/ slide -->
-    <% end %>
+			<!-- /slide description -->
+
+			<!-- slide background image -->
+			<%= image_tag i.image.thumbnail("600x400").url, :alt=>"" %>
+
 		</div>
-		<!-- / cycle slider -->
-
-		<!-- slider buttons -->
-		<div id="numbers"></div>
-		<!-- / slider buttons -->
-
+		<!--/ slide -->
+  <% end %>
 	</div>
-	<!--/ end div #slider -->
+	<!-- / cycle slider -->
 
-	<div class="clear"></div>
-  <%= raw @page.content_for :body %>
-	<!-- page contents -->
-	<div class="auto_columns">
-    <%= raw @page.content_for :row_1 %>
-  </div>
-  <div class="line"></div>
-  <div class="auto_columns">
-    <%= raw @page.content_for :row_2 %>
-  </div>
-	<div class="clear"></div>
+	<!-- slider buttons -->
+	<div id="numbers"></div>
+	<!-- / slider buttons -->
 
-  <!-- / page contents -->
+</div>
+<!--/ end div #slider -->
+
+<div class="clear"></div>
+<%= raw @page.content_for :body %>
+<!-- page contents -->
+<div class="auto_columns">
+  <%= raw @page.content_for :row_1 %>
+</div>
+<div class="line"></div>
+<div class="auto_columns">
+  <%= raw @page.content_for :row_2 %>
+</div>
+<div class="clear"></div>
+<div class="line"></div>
+<h4>OUR CLIENTS</h4>
+<%= render :partial => "layouts/clients" %>
+<div class="clear"></div>
+<!-- / page contents -->
 

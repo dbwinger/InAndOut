@@ -101,10 +101,21 @@
 		    </div>
 		    <!--/ end div #sidebar -->
         <div id="content">
-          <div class="slider_cover"></div><!-- cover for slider -->
           <div class="content_top"></div><!-- curv for content top -->
 	        <!-- content wrapper -->
 	        <div class="content">
+	          <!-- sub page top bar -->
+				    <div class="sub_page_top">
+					    <!-- search -->
+					    <div class="search-bar">
+					      <%= render "refinery/shared/search" %>
+					    </div>
+					    <!-- / end div .search-bar -->
+
+					    <div class="clear"></div>
+
+				    </div>
+
         		<section id="page">
               <%= yield %>
             </section>

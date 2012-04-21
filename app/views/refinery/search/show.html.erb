@@ -1,0 +1,22 @@
+<% content_for :body_content_title do %>
+  <%= t('.search_results_for', :what => params[:query]) %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <h1><%= t('.search_results_for', :what => params[:query]) %></h1>
+
+  <% if @results.any? %>
+  <ul id="search_results">
+    <% @results.each do |result| %>
+      <li>
+        <%= link_to raw(result.title.gsub(/(#{Regexp.escape(params[:query])})/i, '<mark>\1</mark>')), result_url(result) %>
+      </li>
+    <% end %>
+  </ul>
+  <%else%>
+    No results found. Please try another search or use the menu to the left.
+  <%end%>
+<% end %>
+
+<%= render :partial => "/refinery/content_page" %>
+

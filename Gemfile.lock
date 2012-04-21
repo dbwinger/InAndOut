@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/resolve/refinerycms-search.git
+  revision: 5aef6f9c0d8ceb39af999eff03b1f8d03c747f79
+  branch: 2-0-stable
+  specs:
+    refinerycms-search (2.0.0)
+      refinerycms-core (~> 2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -247,6 +255,7 @@ DEPENDENCIES
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
   refinerycms-page-images (~> 2.0.0)
+  refinerycms-search (~> 2.0.0)!
   ruby-debug19
   sass-rails
   sqlite3

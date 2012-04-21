@@ -214,7 +214,8 @@ $medium_color: #A07A45;
 	.content{
 		background:#fff;
 		padding:0 30px 1px 30px;
-		@include box-shadow(8px -2px 12px -8px #111);
+		@include box-shadow(8px 0px 12px -8px #111);
+		min-height: 500px;
 	}
 
 	/* graphic cover for slider */
@@ -1556,10 +1557,9 @@ $medium_color: #A07A45;
 ------------------------------------------------------- */
 
 	.sub_page_top{
-		padding-top:4px;
 		height:26px;
 		border-bottom:1px solid #eee;
-		margin-bottom:30px;
+		margin-bottom:16px;
 	}
 
 	/* search */

@@ -35,6 +35,7 @@ gem 'refinerycms-i18n',   '~> 2.0.0'
 gem 'refinerycms-inquiries', '~> 2.0.0'
 gem 'refinerycms-page-images', '~> 2.0.0'
 gem 'refinerycms-copywriting'
+gem 'refinerycms-search', '~> 2.0.0', :git => 'git://github.com/resolve/refinerycms-search.git', :branch => '2-0-stable'
 
 # The Heroku gem allows you to interface with Heroku's API
 gem 'heroku'

@@ -1,0 +1,9 @@
+<%= form_tag refinery.search_path do -%>
+  <fieldset>
+  <%= image_submit_tag "pixel.gif", :class => "searchsubmit" %>
+  <%= text_field_tag :query, (params[:query] if params[:query]), {:type => "search",
+                     :placeholder => "Search",
+                     :class => "search_text showtextback" } %>
+  </fieldset>
+<% end %>
+

@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+
+ * From Themeforest theme
+ * TODO: Check if all of these are actually used.
+ *= require reset
+ *= require style
+ * require prettyPhoto
+ * require jquery.popeye.style
+ * require jquery.popeye
+ *= require colortip-1.0-jquery
+ *= require nivo-slider
+ * END from Themeforest theme
+
+*/
+
+@import "bourbon";
+@import "reset";
+@import "style";
+@import "colortip-1.0-jquery";
+@import "nivo-slider";
+
+// FONTS
+
+/* Oswald */
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+/* Droid Sans */
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+/* Droid Serif */
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
+
+div.sidebar_content_top {
+    @include box-shadow(-8px 8px 12px -8px #111);
+    @include border-bottom-radius(2px);
+}
+
+#logo {
+    padding: 20px 0px 8px 30px;
+    @include linear-gradient(#ffffff, #c0e1ff);
+
+    a {
+        color: #452A15;
+        font-style: italic;
+        font-size: 21px;
+        text-decoration: none;
+
+        div {
+            margin: -6px 0 0 2px;
+        }
+    }
+    img {
+        width:180px;
+    }
+}
+#tagline {
+    padding: 10px 0px;
+    background-color: #E6D391;
+    color: #452A15;
+    font-size: 21px;
+    text-align: center;
+    border-top: solid 5px #fff;
+    @include border-bottom-radius(2px);
+}
+

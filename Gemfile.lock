@@ -36,6 +36,8 @@ GEM
       activerecord (>= 3.0.0)
     babosa (0.3.7)
     bcrypt-ruby (3.0.1)
+    bourbon (1.4.0)
+      sass (>= 3.1)
     builder (3.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -233,7 +235,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 3.2.1)
+  bourbon
   fog
   heroku
   jquery-rails
@@ -246,7 +248,7 @@ DEPENDENCIES
   refinerycms-inquiries (~> 2.0.0)
   refinerycms-page-images (~> 2.0.0)
   ruby-debug19
-  sass-rails (~> 3.2.3)
+  sass-rails
   sqlite3
   therubyracer
   thin

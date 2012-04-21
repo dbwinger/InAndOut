@@ -1,3 +1,4 @@
+@import "bourbon";
 /* ----------------------------------------------------
 
 	File Name: style.css
@@ -62,7 +63,7 @@
 */
 
 /* SASS Variables */
-$medium_color: #A57A45;
+$medium_color: #A07A45;
 
 /* ----------------------------------------------------
 	GLOBAL STRUCTURE
@@ -74,7 +75,8 @@ $medium_color: #A57A45;
 		font-size:12px;
 		line-height:20px;
 		position:relative;
-		background:#ddd;
+		background:#eee;
+		@include linear-gradient(#ccc 50%, #eee);
 		color:#666;
 		padding:0 0 0 1px;
 	}
@@ -110,26 +112,29 @@ $medium_color: #A57A45;
 		text-align:center;
 		z-index:1;
 		overflow:hidden;
+
+		//height: 700px;
 	}
 
-	/* background image holder */
-	.background_pic_holder{
+    /* background image holder */
+	.background_pic_gradient {
 		margin:0 auto 0 auto;
 		max-width:1990px;
 		min-width:980px;
 		width:100%;
 		overflow:hidden;
 		/*max-height:600px;*/
-		text-align:center;
 		z-index:2;
 		/* Added by daryl */
-		height:600px;
-		background: linear-gradient(top, #b0a085 0%,#705035 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b0a085), color-stop(100%,#705035)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #b0a085 0%,#705035 100%); /* Chrome10+,Safari5.1+ */
-		/*background-color:#907055;*/
+		@include linear-gradient(#a09075,#755a40);
+		height: 700px;
 	}
-
+	.background_pic_holder {
+	    background-image:url('logo_background.png');
+//		background-position: -10px -0px;
+//		background-repeat: repeat-x;
+		height: 700px;
+	}
 	/* background image magin */
 	.background_pic_holder img{
 		margin:0 auto;
@@ -137,7 +142,7 @@ $medium_color: #A57A45;
 
 	/* background curv image */
 	.back-curv{
-		background:url(back-curv.png) center top no-repeat;
+		background:url(back-curv-gray.png) center top no-repeat;
 		height:452px;
 		width:100%;
 		position:relative;
@@ -184,15 +189,8 @@ $medium_color: #A57A45;
 		background:#343434;
 		padding:15px 30px 0 30px;
 	    margin-top: 18px;
-        -moz-border-radius-topleft: 4px;
-        -moz-border-radius-topright: 4px;
-        -moz-border-radius-bottomright: 0px;
-        -moz-border-radius-bottomleft: 0px;
-        -webkit-border-radius: 4px 4px 0px 0px;
-        border-radius: 4px 4px 0px 0px;
-        -webkit-box-shadow:  -8px 0px 12px -8px #111;
-        -moz-box-shadow:  -8px 0px 12px -8px #111;
-        box-shadow:  -8px 0px 12px -8px #111;
+	    @include border-top-radius(3px);
+	    @include box-shadow(-8px 0px 12px -8px #111);
 	}
 
 	/* sidebar content color */
@@ -216,10 +214,7 @@ $medium_color: #A57A45;
 	.content{
 		background:#fff;
 		padding:0 30px 1px 30px;
-        -webkit-box-shadow:  8px -2px 12px -8px #111;
-        -moz-box-shadow:  8px -2px 12px -8px #111;
-        box-shadow:  8px -2px 12px -8px #111;
-
+		@include box-shadow(8px -2px 12px -8px #111);
 	}
 
 	/* graphic cover for slider */
@@ -1038,9 +1033,7 @@ $medium_color: #A57A45;
 		display:inline;
 		float:left;
 		border:0;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
+		@include border-radius(10px);
 		padding: 2px;
 	}
 

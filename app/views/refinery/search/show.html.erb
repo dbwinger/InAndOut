@@ -3,8 +3,7 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-  <h1><%= t('.search_results_for', :what => params[:query]) %></h1>
-
+  <h1 id="body_content_title" class="line"><%= t('.search_results_for', :what => params[:query]) %></h1>
   <% if @results.any? %>
   <ul id="search_results">
     <% @results.each do |result| %>

@@ -2,4 +2,24 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+    refinery:
+        inquiries:
+            admin:
+                inquiries:
+                    show:
+                        company: Company
+                        services: Services Desired
+            inquiry_mailer:
+                notification:
+                    company: Company
+                    services: Services Desired
+    activerecord:
+        attributes:
+            refinery/inquiries/inquiry:
+                company: "Company:"
+                name: "Name:"
+                email: "Email:"
+                phone: "Phone:"
+                message: "Message:"
+                services: "Services desired:"
+

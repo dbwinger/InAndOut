@@ -43,3 +43,6 @@ gem 'heroku'
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'
 
+# For memcached
+gem 'dalli'
+

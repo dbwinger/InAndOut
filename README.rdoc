@@ -1,3 +1,5 @@
 == Notes for developer
-Client logo images are max 60px high and 160px wide.
+* Client logo images are max 60px high and 160px wide.
+* Design based on theme-forest theme.  Original files can be found under "design" directory
+* Original logos provided found under "design" directory
 

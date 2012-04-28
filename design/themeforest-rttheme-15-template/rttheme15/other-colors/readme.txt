@@ -1,0 +1,1 @@
+Please read Documentation "Colors" section to learn how to use this template with the other skins. Documentation file can be found in the /Documentation/ folder as index.html

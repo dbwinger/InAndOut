@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>RT-THEME 15 - HTML TEMPLATE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Ivor">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    </head>
+    
+<body data-spy="scroll" id="top">
+
+<!-- Documentation Navbar -->
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container"> 
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+	<a class="brand" href="#">RT-THEME 15</a> <!-- TIP: Change this for the name of your file -->
+     	<div class="nav-collapse">
+        <ul class="nav">
+              <li><a href="#top" class="active">Top</a></li>
+              <li><a href="#markup">Markup</a></li>
+              <li><a href="#styles">Styles</a></li>
+              <li><a href="#javascript">JavaScript</a></li>
+              <li><a href="#psd">Photoshop</a></li> 
+              <li><a href="#credits">Credits</a></li> 
+              <li><a href="http://support.rtthemes.com">Support Forum</a></li> 
+              <li><a href="http://themeforest.net/user/stmcan">Contact Me</a></li> 
+          </ul>
+</div>
+	</div>
+		</div>
+			</div> <!-- End of Navbar -->
+
+<!-- Main Container Beginning -->			
+			
+<div class="container">
+    
+	<div class="masthead">
+	    <h1>RT-THEME 15 - HTML TEMPLATE </h1>
+	    <p class="marketing-byline">TEMPLATE BY <a href="http://themeforest.net/user/stmcan">stmcan</a></p>
+	    <p>&nbsp;</p>
+	    <p class="download-info"> <a href="http://support.rtthemes.com" class="btn btn-primary btn-large">Item Support Forum →</a></p>
+	</div> <!-- masthead -->
+	
+   <div id="intro">
+    <p class="highlight hero-unit">Thank you for purchasing my template. If you have any questions that are beyond the scope of this help file, please feel free to post your questions on my support forum at <a href="http://support.rtthemes.com" target="_blank">http://support.rtthemes.com</a>. Thanks so much!</p>
+  </div> <!-- intro -->
+      
+<section id="markup">
+	<div class="page-header">
+	  <h1>Markup <small>Markup customization and highlights</small></h1>
+	</div>
+	
+     
+    <p>This theme is a fixed layout with two columns. All of the information within the main content area is nested within a div with an id of "container". The sidebar's (left column) content is within a div with an id of "sidebar".</p>
+
+    <hr />
+
+    <div class="row">
+      <div class="span3">
+        <h3>General Markup</h3>
+        <p> The general template structure is the same throughout the template. Here is the general structure.</p>
+      </div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; dir=&quot;ltr&quot; lang=&quot;en-US&quot;&gt;  
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;  
+&lt;title&gt;RT-Theme 15&lt;/title&gt; 
+
+&lt;link rel=&#039;stylesheet&#039; id=&#039;theme-reset-css&#039;  href=&#039;css/reset.css&#039; type=&#039;text/css&#039; media=&#039;all&#039; /&gt;
+&lt;link rel=&#039;stylesheet&#039; id=&#039;theme-style-css&#039;  href=&#039;style.css&#039; type=&#039;text/css&#039; media=&#039;all&#039; /&gt;
+&lt;link rel=&#039;stylesheet&#039; id=&#039;theme-style-all-css&#039;  href=&#039;css/style.css&#039; type=&#039;text/css&#039; media=&#039;all&#039; /&gt;
+&lt;link rel=&#039;stylesheet&#039; id=&#039;prettyPhoto-css&#039;  href=&#039;css/prettyPhoto.css&#039; type=&#039;text/css&#039; media=&#039;screen&#039; /&gt;
+&lt;link rel=&#039;stylesheet&#039; id=&#039;jquery-popeye-style-css&#039;  href=&#039;css/jquery.popeye.style.css&#039; type=&#039;text/css&#039; media=&#039;all&#039; /&gt;
+&lt;link rel=&#039;stylesheet&#039; id=&#039;jquery-popeye-css&#039;  href=&#039;css/jquery.popeye.css&#039; type=&#039;text/css&#039; media=&#039;all&#039; /&gt;
+&lt;link rel=&#039;stylesheet&#039; id=&#039;jquery-colortip-css&#039;  href=&#039;css/colortip-1.0-jquery.css&#039; type=&#039;text/css&#039; media=&#039;all&#039; /&gt;
+&lt;link rel=&#039;stylesheet&#039; id=&#039;nivo-slider-css&#039;  href=&#039;css/nivo-slider.css&#039; type=&#039;text/css&#039; media=&#039;all&#039; /&gt;
+&lt;!--[if IE 7]&gt;
+&lt;link rel=&#039;stylesheet&#039; id=&#039;theme-ie7-css&#039;  href=&#039;css/ie7.css&#039; type=&#039;text/css&#039; media=&#039;screen&#039; /&gt;
+&lt;![endif]--&gt;
+&lt;!--[if lte IE 8]&gt;
+&lt;link rel=&#039;stylesheet&#039; id=&#039;theme-lte8-css&#039;  href=&#039;css/ie.css&#039; type=&#039;text/css&#039; media=&#039;screen&#039; /&gt;
+&lt;![endif]--&gt;
+
+&lt;script type=&#039;text/javascript&#039; src=&#039;http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/jquery.easing.1.3.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/jquery.cycle.all.min.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/jquery.tools.min.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/jquery.prettyPhoto.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/menu_min.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/colortip-1.0-jquery.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/jquery.popeye-2.0.4.min.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/jquery.validate.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/jquery.form.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/jquery.tweet.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/jflickrfeed.min.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/jquery.nivo.slider.pack.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;js/script.js&#039;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body class=&quot;<em>blue-skin</em>&quot;&gt; &lt;!-- body class for blue skin --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+
+    <hr />
+
+<div class="row">
+    <div class="span3">
+  <h3>How To Use With Other Colors</h3>
+  <p>If you would like to use this template other available colors, you all need to change body class value. </p>
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+
+&lt;body class=&quot;default-skin&quot;&gt; &lt;!-- body class for blue skin --&gt;
+
+&lt;body class=&quot;blue-skin&quot;&gt; &lt;!-- body class for blue skin --&gt;
+
+&lt;body class=&quot;red-skin&quot;&gt; &lt;!-- body class for red skin --&gt;
+
+&lt;body class=&quot;green-skin&quot;&gt; &lt;!-- body class for green skin --&gt;
+
+</pre>
+      </div>
+    </div>
+        
+    <hr />
+
+<div class="row">
+    <div class="span3">
+  <h3>Columns Framework</h3>
+  <p>Template devaloped with a custom made column framework. There are 1,2,3,4,5 columns available. You all need to know that, the first and last columns has additional css class named first and last. Look at the example to find a three columns sample. All the structure can be found in the layouts.html </p>
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+&lt;!--three column first--&gt;
+&lt;div class=&quot;box three first&quot;&gt;
+content
+&lt;/div&gt;
+
+&lt;!--three column middle--&gt;
+&lt;div class=&quot;box three&quot;&gt;
+content
+&lt;/div&gt;	
+
+&lt;!--three column last--&gt;
+&lt;div class=&quot;box three last&quot;&gt;
+content
+&lt;/div&gt;
+</pre>
+      </div>
+    </div>
+        
+    <hr />
+    
+<div class="row">
+    <div class="span3">
+  <h3>Customizing Home Page Contens</h3>
+  <p>Using the same columns structure above, you can manage the home page as you wish.</p>
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+&lt;!-- page contents --&gt; 
+
+.
+.
+
+&lt;!-- box four --&gt;
+&lt;div class=&quot;box four first&quot;&gt;						
+	&lt;div class=&quot;featured&quot;&gt;				
+		&lt;!-- box title--&gt;
+		&lt;div class=&quot;title&quot;&gt;					
+			&lt;h4&gt;&lt;a href=&quot;about&quot; title=&quot;OUR PRODUCTS&quot;&gt;OUR PRODUCTS&lt;/a&gt;&lt;/h4&gt;					    
+		&lt;/div&gt;
+		&lt;!-- / box title--&gt;
+
+		&lt;!-- text--&gt;
+		&lt;p&gt;
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec purus tellus, quis pulvinar tortor. Sed mattis lobortis gravida.				
+			
+			&lt;!-- read more link--&gt;
+			&lt;a href=&quot;#&quot; title=&quot;&quot; class=&quot;read_more&quot;&gt;read more &acirc;��&lt;/a&gt;
+		&lt;/p&gt;
+		&lt;!-- / text--&gt;
+	&lt;/div&gt;		    
+&lt;/div&gt;
+&lt;!-- / box --&gt;
+
+.
+.
+
+&lt;!-- page contents --&gt; 
+</pre>
+      </div>
+    </div>
+        
+    <hr />
+
+
+<div class="row">
+    <div class="span12">
+  <h3>The Smooth Version</h3>
+  <p>Smooth version of the theme has different HTML structure and the core files can be found the <span class="label-warning">/smooth-version/</span> directory. </p>
+</div>
+ 
+    </div>
+        
+    <hr />
+   
+<div class="row">
+    <div class="span3">
+  <h3>Main Navigation</h3>
+  <p>The main navigation of the template using simple UL list structure. The current page has special class as "current_page_item"</p> 
+    
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+&lt;!-- Navigation --&gt;
+&lt;div id=&quot;navigation&quot;&gt;
+	&lt;ul&gt;
+		&lt;li class=&quot;current_page_item first&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;HOME&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;THEME FEATURES&lt;/a&gt;
+			&lt;!-- first level sub menu --&gt;
+			&lt;ul class=&quot;sub-menu&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;about-us.html&quot;&gt;ABOUT US&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;HOME PAGE SLIDERS&lt;/a&gt;
+				&lt;ul class=&quot;sub-menu&quot;&gt;
+					&lt;li&gt;&lt;a href=&quot;cycle-slider.html&quot;&gt;CYCLE SLIDER&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;nivo-slider.html&quot;&gt;NIVO SLIDER&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;COLORS&lt;/a&gt;
+					&lt;!-- second level sub menu --&gt;	
+					&lt;ul class=&quot;sub-menu&quot;&gt;
+						&lt;li&gt;&lt;a href=&quot;default-skin.html&quot;&gt;DEFAULT&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;blue-skin.html&quot;&gt;BLUE&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;red-skin.html&quot;&gt;RED&lt;/a&gt;&lt;/li&gt; 
+						&lt;li&gt;&lt;a href=&quot;green-skin.html&quot;&gt;GREEN&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- / Navigation --&gt; 
+</pre>
+      </div>
+    </div>
+
+    <hr />
+
+
+<div class="row">
+    <div class="span3">
+  <h3>Sidebar Widgets</h3>
+  <p>You can fidn all the available sidebar wideget in the all-sidebar-widgets.html file. </p> 
+    
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+&lt;!-- Testimonials Widget --&gt;
+&lt;div class=&quot;box widget&quot;&gt;
+&lt;!-- widget title--&gt;
+&lt;h4&gt;Testimonials&lt;/h4&gt;
+	
+.
+content of the widget
+.
+    
+&lt;/div&gt;
+&lt;!-- / Testimonials Widget --&gt;
+</pre>
+      </div>
+    </div>
+
+    <hr />
+
+        
+<div class="row">
+    <div class="span3">
+  <h3>Home Page Sliders</h3>
+  <p>There are two home page available sliders comes with the template; Cycle and Nivo. You can find example usage of the sliders in the main directory; cycle slider as cycle-slider.html and nivo slider as nivo-slider.html</p> 
+    
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+&lt;!-- slider area --&gt;	
+&lt;div class=&quot;slider-wrapper theme-default&quot; id=&quot;slider&quot;&gt;
+.
+.
+.
+.
+&lt;/div&gt;
+&lt;!--/ end div #slider --&gt;
+</pre>
+      </div>
+    </div>
+
+    <hr />
+
+<div class="row">
+    <div class="span3">
+  <h3>Change Structure</h3>
+  <p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.</p>
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums">
+#wrap #primaryContent a {
+   color: #someColor;
+}
+</pre>
+      </div>
+    </div>
+  </section> <!-- Markup -->
+      
+
+<section id="styles">
+    <div class="page-header">
+       <h1>Styles <small>Styles customization and highlights</small></h1>
+     </div>
+
+ <div class="alert alert-info"> <b>Heads up!</b> Nine CSS files has been included to the template. </div>
+
+<div class="row">
+    <div class="span3">
+  <h3>Stylesheets</h3>
+  <p>Here's a list of the stylesheet files I'm using with this template, you can find more information opening each file:</p>
+</div>
+<div class="span9">
+        <table class="table table-bordered table-striped">
+              <thead>
+            <tr>
+                  <th>File Name</th>
+                  <th>Description</th>
+                </tr>
+          </thead>
+              <tbody>
+            <tr>
+                  <td><code>styles.css</code></td>
+                  <td>Main css file</td>
+                </tr>
+            <tr>
+                  <td><code>reset.css</code></td>
+                  <td>Generic reset file.</td>
+                </tr>
+            <tr>
+                  <td><code>prettyPhoto.css</code></td>
+                  <td>css file of PrettyPhoto jQuery plugin.</td>
+                </tr>
+            <tr>
+                  <td><code>jquery.popeye.style.css</code></td>
+                  <td>Syle css file of Popoye slider jQuery plugin.</td>
+                </tr>
+            <tr>
+                  <td><code>jquery.popeye.css</code></td>
+                  <td>Structure css file of Popoye jQuery plugin.</td>
+                </tr>
+            <tr>
+                  <td><code>colortip-1.0-jquery.css</code></td>
+                  <td>css file of ColorYip jQuery plugin. (the tooltips)</td>
+                </tr>
+            <tr>
+                  <td><code>nivo-slider.css</code></td>
+                  <td>css file of Nivo Slider jQuery plugin. (you can remove it if you don't use nivo on a page)</td>
+                </tr>         
+            <tr>
+                  <td><code>ie7.css</code></td>
+                  <td>fixes for IE7</td>
+                </tr>  
+            <tr>
+                  <td><code>ie.css</code></td>
+                  <td>fixes for all IE general versions before then 9.</td>
+                </tr>                                                                                                         
+          </tbody>
+            </table>
+      </div>
+        </div>
+    <hr />
+    <div class="row">
+	<div class="span3">
+	   <h3>CSS Structure</h3>
+	   <p>The main css file style.css contains all the structure and it's been seperated as the shown right.</p>
+       
+       <b>Other Colors</b>
+       <p>CSS codes of the other colors also included to this file. See 35th,36th and 37th sections of the file to customize them.</p>
+	</div>
+
+<div class="span9">	
+<pre class="prettyprint linenums">
+	1 ) 	GOOGLE FONTS
+	2 ) 	GLOBAL STRUCTURE
+	3 ) 	NAVIGATIONS
+	4 ) 	LINKS
+	5 ) 	PAGE ELEMENTS
+	6 ) 	CONTENT LIST WIDGETS
+	7 ) 	SIDEBAR LIST WIDGETS
+	8 ) 	CONTACT LISTS
+	9 ) 	SOCIAL MEDIA ICONS
+	10 ) 	HEADINGS
+	11 ) 	HOME PAGE SLIDER
+	12 ) 	IMAGE SLIDER - SHORTCODE
+	13 ) 	RT-THEMES CSS FRAMEWORK
+	14 ) 	PORTFOLIO
+	15 ) 	IMAGES
+	16 ) 	BLOG
+	17 ) 	FRAMES, BORDERS, CAPTIONS
+	18 ) 	PRODUCTS
+	19 ) 	PAGING
+	20 ) 	PHOTO GALLERY
+	21 ) 	TEXT ELEMENTS
+	22 ) 	RECENT POSTS WIDGET
+	23 ) 	SUB PAGE TOP
+	24 ) 	LISTS
+	25 ) 	TABLES
+	26 ) 	FOOTER
+	27 ) 	PRODUCTS DETAIL TABS
+	28 ) 	BUTTONS
+	29 ) 	FORMS
+	30 ) 	ACCORDIONS
+	31 ) 	SCROLLABLE IMAGE GALLERIES
+	32 ) 	TWITTER
+	33 ) 	COMMENTS
+	34 ) 	POPULAR POSTS
+	35 ) 	FLCKR THUMBS
+	36 ) 	RED SKIN
+	37 ) 	GREEN SKIN
+	38 ) 	BLUE SKIN
+</pre>
+      </div>
+        </div>
+
+  <hr />
+    <div class="row">
+	<div class="span3">
+	   <h3>How to customize template color?</h3>
+	   
+
+       <p>I have included some psd files into the PSD Files folder. In order to get customized left-sidebar you can use these files. For example;<br /><br />
+       </p>
+       <ul>
+         <li> If you're using the defaul skin (grey one) open /skin-default/skin-default.psd </li>
+         <li> Change the color of the file as you wish </li>
+         <li> Save as skin-default.png in /images/ folder and replace with the old one </li>
+         <li>Once you customized the curvy images you need to edit css also. Open /css/style.css and change background value of the class as your customized image. (see example code #1) </li>
+         <li> If you're working another skin, you need to customize it's own color. You can find specific CSS codes for the other skins at the bottom of the file. Example for the blue skin (see example code #2) 
+         </li>
+       </ul>
+       
+</p>
+	</div>
+
+<div class="span9">	
+<pre class="prettyprint linenums">
+/*  example code #1*/
+ 
+/* sidebar background color */
+  .sidebar_content{
+    background:#343434;
+    padding:0 30px;
+ }
+</pre>
+<pre class="prettyprint linenums">
+/* example code #2*/
+ 
+body.blue-skin .sidebar_content{background:#0c3348; }
+</pre>
+      </div>
+    </div>
+
+
+  <hr />
+    <div class="row">
+	<div class="span3">
+	   <h3>How to customize Body Fonts?</h3>
+	   
+
+       <p>I have used Google Fonts API </p>
+       <p><a href="http://www.google.com/webfonts" class="alert">http://www.google.com/webfonts</a> </p>
+       <p>for the template. Open the style.css and include your fonts as I did. <br /> 
+         </ul>
+         
+       </p>
+	</div>
+
+<div class="span9">	
+<pre class="prettyprint linenums">
+/* ----------------------------------------------------
+
+	GOOGLE FONTS
+
+------------------------------------------------------- */
+	/* Oswald */
+	@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+	/* Droid Sans */
+	@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+	/* Droid Serif */
+	@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
+</pre>
+<pre class="prettyprint linenums">
+	/* body */
+	body {
+		font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+		font-size:12px;
+		line-height:20px; 
+		position:relative;
+		background:#E5E5E5;
+		color:#666;
+		padding:0 0 0 1px;
+	}
+</pre>
+      </div>
+    </div>
+
+
+ <hr />
+    <div class="row">
+	<div class="span3">
+	   <h3>How to customize Menu Font Size and Fonts?</h3>
+	   
+
+       <p>Customize the following section of the style.css to customize menu fotns and sizes! </p> 
+        
+         
+       </p>
+	</div>
+
+<div class="span9">	
+ 
+<pre class="prettyprint linenums">
+/* ----------------------------------------------------
+
+	NAVIGATIONS
+
+------------------------------------------------------- */
+
+	/* main navigation bar */
+	#navigation{ 
+		padding:0 0 30px 0;
+	}
+
+	/* first level menu item's font face */
+	#navigation > ul > li > a{
+		font-family: 'Oswald', arial, serif; 
+	}
+
+	/* first level links */
+	#navigation, #navigation a{ 
+		color:#fff;
+		text-decoration:none;
+		font-size:14px;
+		line-height:100%;
+		display:block;
+	}
+
+.
+.
+.
+
+</pre>
+      </div>
+    </div>
+                 
+  </section>
+      <!-- Styles -->
+      
+      <section id="javascript">
+	<div class="page-header">
+	  <h1>JavaScript <small>JavaScript customization and highlights</small></h1>
+	</div>
+	<div class="row">
+	  <div class="span3">
+	    <h3>JavaScript Files</h3>
+	    <p>Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+	  </div>
+	  <div class="span9">
+	    <table class="table table-bordered table-striped">
+	      <thead>
+	        <tr>
+	          <th>Tag</th>
+	          <th>Description</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr>
+	          <td height="37"><code>jquery.js</code></td>
+	          <td>jQuery is a Javascript library that greatly reduces the amount of code that you must write. Template uses Google API to include latest version of the jQuery.</td>
+	        </tr>
+	        <tr>
+	          <td><code>jquery.easing.1.3.js</code></td>
+	          <td>jQuery Easing - Offers multiple easing options</td>
+	        </tr>
+	        <tr>
+	          <td><code>jquery.prettyPhoto.js</code></td>
+	          <td>jQuery PrettyPhoto plugin </td>
+	        </tr>
+            
+                    <tr>
+	          <td><code>jquery.tools.min.js</code></td>
+	          <td>jQuery Tools Plugin </td>
+	        </tr>
+            
+                    <tr>
+	          <td><code>jquery.cycle.all.min.js</code></td>
+	          <td>jQuery Cycle plugin </td>
+	        </tr>
+            
+                    <tr>
+	          <td><code>menu_min.js</code></td>
+	          <td>jQuery Vertical Drop-Down Menu </td>
+	        </tr>
+            
+                    <tr>
+	          <td><code>colortip-1.0-jquery.js</code></td>
+	          <td>jQuery Color Tip Plugin </td>
+	        </tr>
+            
+            
+                    <tr>
+	          <td><code>jquery.popeye-2.0.4.min.js</code></td>
+	          <td>jQuery Popoye Plugin </td>
+	        </tr>
+            
+                    <tr>
+	          <td><code>jquery.validate.js</code></td>
+	          <td>jQuery Form Validation Plugin </td>
+	        </tr>
+
+            
+                    <tr>
+	          <td><code>jquery.form.js</code></td>
+	          <td>jQuery Form Plugin </td>
+	        </tr>
+
+            
+                    <tr>
+	          <td><code>jquery.tweet.js</code></td>
+	          <td>jQuery Twitter Plugin </td>
+	        </tr>
+
+            
+                    <tr>
+	          <td><code>jflickrfeed.min.js</code></td>
+	          <td>jQuery Flickr Plugin </td>
+	        </tr>
+
+            
+                    <tr>
+	          <td><code>jquery.nivo.slider.pack.js</code></td>
+	          <td>jQuery Nivo Slider Plugin </td>
+	        </tr>             
+   
+                       <tr>
+	          <td><code>script.js</code></td>
+	          <td>Includes several functions and plugins</td>
+	        </tr>   
+                                                        
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
+	<hr />
+	<div class="row">
+	<div class="span3">
+	  <h3>Customize Cycle Slider</h3>
+	  <p>If you want to change the cycle slider's speed transition and it's effect, open up the file <code> scripts.js </code> and change the following code: </p>
+	</div>
+<div class="span9">
+<pre class="prettyprint js linenums:103">
+  /* CYCLE SLIDER */
+  var rttheme_slider_timeout=7000; //miliseconds 7000 = 7 seconds
+  var rttheme_slider_effect="fade";
+</pre>
+      </div>
+        </div>
+
+<hr />
+	<div class="row">
+	<div class="span3">
+	  <h3>Customize Nivo Slider</h3>
+	  <p>If you want to change the slider's speed transition, open up the file <code> scripts.js </code> and change the following code: </p>
+	</div>
+<div class="span9">
+<pre class="prettyprint js linenums:103">
+  /* NIVO SLIDER */
+  var rttheme_nivo_slider_timeout=7000; //miliseconds 7000 = 7 seconds  
+</pre>
+      </div>
+        </div>
+
+<hr />
+	<div class="row">
+	<div class="span3">
+	  <h3>Twitter Feeds</h3>
+	  <p>Find these lines in the <code> scripts.js </code> and change the value with your twitter username: </p>
+	</div>
+<div class="span9">
+<pre class="prettyprint js linenums:103">
+  /* TWITTER */ 
+  var twitter_user_name = 'envatowebdesign'; //your twitter username  
+  var tweet_count = 1; //number of tweets to show
+</pre>
+      </div>
+        </div>
+
+
+<hr />
+	<div class="row">
+	<div class="span3">
+	  <h3>Flickr Feeds</h3>
+	  <p>Find these lines in the <code> scripts.js </code> and change the value with your flickr username: </p>
+	</div>
+<div class="span9">
+<pre class="prettyprint js linenums:103">
+  /* FLICKR */
+  var flickr_user_id = '36587311@N08'; //your flickr user id
+  var flickr_thumbnail_count = 4; //the thumbmail number to show  
+</pre>
+      </div>
+        </div>
+                
+  </section><!-- JavaScript -->
+      
+<section id="psd">
+  <div class="page-header">
+    <h1>Photoshop Files <small>Photoshop customization and highlights</small></h1>
+  </div>
+  <p>You can find all psd files that used with the theme in the PSD Files folder.
+
+    There are several common psd files in the theme-parts folder such as logo, icons, pagination buttons etc.
+    In skin folders there are two files, for example if you open skin-default folder you'll find skin-default.psd and back-curv.psd. In order to customize colors of a skin you can open these files, edit and save in the images folder. For example if you want to customize default skin, open the /skin-default/skin-default.psd change the color as you like and save as skin-default.png in the images folder.
+</p> 
+</section><!-- Photoshop -->
+       
+      
+
+  <section id="credits">
+	  <div class="page-header">
+	    <h1>Credits Files <small>Some of your credits and sources</small></h1>
+	  </div>
+	  <p>I've used the following images, icons or other files as listed.</p>
+	  <h3>JavaScript</h3>
+	  <ol>
+        <li>jQuery <a href="http://jquery.com">http://jquery.com</a> jQuery is a Javascript library that greatly reduces the amount of code that you must write. </li>
+        <li>jQuery Cycle - jQuery plugin <a href="http://malsup.com/jquery/cycle/">http://malsup.com/jquery/cycle/</a> Cylcle script on sliding gallery </li>
+        <li>script.js - Coded by Tolga Can
+          Includes several functions        </li>
+        <li>Query Easing - jQuery plugin <a href="http://gsgd.co.uk/sandbox/jquery.easing.php">http://gsgd.co.uk/sandbox/jquery.easing.php</a> Offers multiple easing options </li>
+        <li>jQuery PrettyPhoto  jQuery plugin  <a href="http://www.no-margin-for-errors.com/projects/prettyPhoto-jquery-lightbox-clone/">http://www.no-margin-for-errors.com/projects/prettyPhoto-jquery-lightbox-clone/ </a></li>
+        <li>Cufon   <a href="http://wiki.github.com/sorccu/cufon/about">http://wiki.github.com/sorccu/cufon/about</a> jQuery UI JavaScript Library </li>
+        <li>jQuery Tools   <a href="http://flowplayer.org/tools/index.html">http://flowplayer.org/tools/index.html</a> jQuery Tools jQuery Plugin </li>
+        <li>jQuery Vertical Drop-Down Menu
+          Copyright Lukasz Czerwinski
+          <a href="http://codecanyon.net/item/jquery-vertical-dropdown-menu/161210">http://codecanyon.net/item/jquery-vertical-dropdown-menu/161210 </a></li>
+        <li>jQuery Popeye
+          Copyright (C) 2008 - 2010 Christoph Schuessler
+          <a href="http://dev.herr-schuessler.de/jquery/popeye/">http://dev.herr-schuessler.de/jquery/popeye/ </a></li>
+        <li>jQuery Tweets
+        <a href="http://tweet.seaofclouds.com/">http://tweet.seaofclouds.com/</a></li>
+        <li>jQuery Nivo Slider
+          Copyright 2011, Gilbert Pellegrom
+          <a href="http://nivo.dev7studios.com">http://nivo.dev7studios.com
+</p>
+        </a></li>
+    </ol>
+	  <h3>&nbsp;</h3>
+<h3>Images &amp; Icons</h3>
+	  <ol>
+	    <li> Stock Photos by Envato<br>
+	      <a href="http://themeforest.net/page/asset_library">http://themeforest.net/page/asset_library</a></li>
+        <li>Icons By Andy Gongea<br>
+          <a href="http://www.graphicrating.com/2009/06/19/quartz-icon-pack">http://www.graphicrating.com/2009/06/19/quartz-icon-pack</a></li>
+        <li>Social Media Vector &amp; Custom Shape Icon Set<br>
+          <a href="http://lifetreecreative.com/icons/">http://lifetreecreative.com/icons/</a></li>
+	  </ol>
+	</section><!-- Credits -->
+       
+
+      <hr />
+
+<div class="goodbye">
+    <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+  </div>
+
+      <hr />
+
+<footer>
+    <p>&copy; Company 2012</p>
+</footer>
+
+</div><!-- /container --> 
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/scripts.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script>
+</body>
+</html>

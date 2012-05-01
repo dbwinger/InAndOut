@@ -1,5 +1,48 @@
 == Notes for developer
-* Client logo images are max 60px high and 160px wide.
-* Design based on theme-forest theme.  Original files can be found under "design" directory
-* Original logos provided found under "design" directory
+This website is built on RefineryCMS.  Customizations, design, and other useful info is described below.
+=== Design
+* Design is based on theme-forest theme.  Original files can be found under "design" directory.  There is good documentation for the theme there.
+** I opted to put style.css from this theme into app/assets, convert to scss, & make changes there.
+** Images from the theme that I changed are in app/assets as well.
+** The rest of the css, js and image files are unchanged and are in vendor/assets
+** Additions (elements not covered in the template) are in application.css.scss (and home for changes specific to home page)
+* Original In & Out logos that were provided are found under "design" directory
+* Client logo images (shown at bottom of home page) are max 60px high and 160px wide.
+
+== RefineryCMS customizations
+=== Inquiries Engine
+2 fields were added to inquiries - "company" and "services".  Both are string fields, but "services" lets users check off the services they're interested in and a csv list is generated for the field.  See changes in these files, committed in rev 6b43c43d092064872aa396a2878c513205d7ce5b :
+* app/decorators/models/refinery/inquiries/inquiry_decorator
+* app/views/refiner/inquiries/admin/inquiries/show.html.erb
+* app/views/refinery/inquiries/inquiries/new.html.erb
+* app/views/refinery/inquiries/inquiry_mailer/notification.text.erb
+* config/locales/en.yml
+
+=== Home page
+See the home page in app/views/refinery/pages/home.html.erb
+The home page view has been overridden and the layout expects 3 sections.  These are currently set up for the page in refinery, but should something get messed up, these would have to be created again from the refinery admin interface.  These are the sections.
+* Home - short text shown under the image rotator.  A "read more" link to "About" page is automatically added (see home.js)
+* row_1 - First row of content boxes.  Currently each box describes a service offered. See below for more understanding how these work.
+* row_2 - Second row of content boxes. ''
+==== Row formatting
+These sections allow the end-user to use from 2-5 sections in each row, but it must be formatted in a specific way.
+Each section should have an H3 tag (optionally linked) followed by a paragraph <p> tag, the first piece of content optionally being an image.  Both of the rows are processed in app/assets/javascripts/home.js, which does the following:
+* reformats to use the column framework in the theme-forest them, adding the correct classes and container divs according to how many <h3/></p> groups are found.
+* Adds "read more" link if the h3 contains a link, and also links the image.
+* Moves images above the H3s
+* Changes H3 to H4.
+TODO: Make this easier for the end-user and less fickle.  One of the problems is the lack of WYSIWYG support for other tags, such as div.  An admin view could maybe be overridden to facilitate this, and maybe make a model for home page widgets which contains title, image, url, text, etc.
+==== Image slider
+The image slider on the home page is included in the themeforest theme, and has been coded to use images found under the "Images" tab in the "Home" page in the refinery admin interface.  See It rotates them in the order they are listed there.  They are displayed at 300px X 640px, so images should be uploaded at that size for best appearance & performance.
+==== Clients
+The clients area at the bottom uses the view partial at app/views/layouts/_clients.html.erb and depends on images in app/assets/images/client_logos
+As noted above, the client logo images are max width 160px, max height 60px.
+=== Other pages
+* Menu items are automatically capitalized in app/views/refinery/_menu_branch.html.erb
+* Search results page (app/views/refinery/search/show.html.erb) and search box (app/views/refinery/shared/_search.html) have been customized.
+
+== Other things to note
+TODO:
+* Emails are sent through Gmail.  See (TODO: where's the config?)  Currently the only time they are sent is to notify Jake of an inquiry.  There is a limit of 200/day.
+* End-user documentation is found at:
 

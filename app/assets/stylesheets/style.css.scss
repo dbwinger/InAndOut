@@ -41,12 +41,7 @@
 	30 ) 	ACCORDIONS
 	31 ) 	SCROLLABLE IMAGE GALLERIES
 	32 ) 	TWITTER
---	33 ) 	COMMENTS
---	34 ) 	POPULAR POSTS
---	35 ) 	FLCKR THUMBS
---	36 ) 	RED SKIN
---	37 ) 	GREEN SKIN
---	38 ) 	BLUE SKIN
+  then, Stuff added by daryl
 
 ------------------------------------------------------- */
 
@@ -75,8 +70,10 @@ $medium_color: #A07A45;
 		font-size:12px;
 		line-height:20px;
 		position:relative;
-		background:#eee;
-		@include linear-gradient(#9CcE39 50%, #7ace09);
+		background: #3c730c;
+//		background:#4d6800;
+
+//		@include linear-gradient(#9CcE39 50%, #7ace09);
 		color:#666;
 		padding:0 0 0 1px;
 	}
@@ -124,22 +121,30 @@ $medium_color: #A07A45;
 		z-index:2;
 		/* Added by daryl */
 		@include linear-gradient(#c0e1ff, #eeeeff);
-		height: 725px;
+		height: 720px;
 	}
 	.background_pic_holder {
 	    background-image:url('background-logo.png');
 	    @include background-size(1571px 771px);
 		background-position: -25px -50px;
-		height: 725px;
+		height: 720px;
 	}
 
+    .grass {
+        background-image:url('grass2.png');
+        height: 35px;
+        width:100%;
+        position:relative;
+        top:-28px;
+        z-index:99;
+        @include background-size(170px 35px);
+    }
 	/* background curv image */
 	.back-curv{
-		background:url(back-curv-gray.png) center top no-repeat;
+		//background:url(back-curv-gray.png) center top no-repeat;
 		height:452px;
 		width:100%;
 		position:relative;
-		z-index:99;
 		top:-280px;
 		min-width:980px;
 		z-index:3;
@@ -2431,4 +2436,46 @@ $medium_color: #A07A45;
 		color: #CECECE !important;
 		text-decoration:underline;
 	}
+
+/* ---------------------------------------------------------
+   Added by DARYL
+------------------------------------------------------------*/
+// Auto-columns
+div.auto_columns img {
+    width: 100%;
+    border: solid 2px #ddd; /*#E8D593;*/
+    @include border-radius(6px);
+}
+div.auto_columns p {
+    padding-bottom: 2px;
+}
+
+#slider .desc .text {
+    @include border-radius(6px);
+}
+
+// Clients list
+div.clients {
+    padding: 10px;
+    border: solid 2px #ddd;
+    background-color: #eee;
+    @include border-radius(8px);
+    margin-bottom: 25px;
+}
+div.clients ul {
+    list-style: none !important;
+    background-color: #aaa;
+}
+div.clients ul li {
+    float:left;
+    list-style-position: outside !important;
+    margin: 0 6px;
+    height: 65px;
+    width: 184px;
+    text-align: center;
+    line-height: 65px;
+}
+div.clients ul li img {
+    vertical-align: middle;
+}
 

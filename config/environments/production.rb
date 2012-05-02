@@ -13,7 +13,8 @@ InAndOut::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  # Enbled per https://devcenter.heroku.com/articles/rack-cache-memcached-static-assets-rails31 because of using Memcached
+  config.serve_static_assets = true
   config.static_cache_control = "public, max-age=2592000"
 
   # Compress JavaScripts and CSS

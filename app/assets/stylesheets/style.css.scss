@@ -76,7 +76,7 @@ $medium_color: #A07A45;
 		line-height:20px;
 		position:relative;
 		background:#eee;
-		@include linear-gradient(#7ace09 50%, #9CcE39);
+		@include linear-gradient(#9CcE39 50%, #7ace09);
 		color:#666;
 		padding:0 0 0 1px;
 	}
@@ -112,7 +112,6 @@ $medium_color: #A07A45;
 		text-align:center;
 		z-index:1;
 		overflow:hidden;
-		//height: 700px;
 	}
 
     /* background image holder */
@@ -122,30 +121,21 @@ $medium_color: #A07A45;
 		min-width:980px;
 		width:100%;
 		overflow:hidden;
-		/*max-height:600px;*/
 		z-index:2;
 		/* Added by daryl */
-		//@include linear-gradient(#a09075,#755a40);
-		//background-color: #99795a;
-		@include linear-gradient(#c0e1ff, #ffffff);
-		height: 700px;
+		@include linear-gradient(#c0e1ff, #eeeeff);
+		height: 725px;
 	}
 	.background_pic_holder {
-	// TRY JUST LONG ANGLES
-	    background-image:url('logo_large.png');
-//	    background-image:url('wood5.jpg');
-		background-position: -210px -240px;
-//		background-repeat: repeat-x;
-		height: 700px;
-	}
-	/* background image magin */
-	.background_pic_holder img{
-		margin:0 auto;
+	    background-image:url('background-logo.png');
+	    @include background-size(1571px 771px);
+		background-position: -25px -50px;
+		height: 725px;
 	}
 
 	/* background curv image */
 	.back-curv{
-		background:url(back-curv-brown.png) center top no-repeat;
+		background:url(back-curv-gray.png) center top no-repeat;
 		height:452px;
 		width:100%;
 		position:relative;

@@ -21,7 +21,7 @@ This website is built on RefineryCMS.  Customizations, design, and other useful 
 === Home page
 See the home page in app/views/refinery/pages/home.html.erb
 The home page view has been overridden and the layout expects 3 sections.  These are currently set up for the page in refinery, but should something get messed up, these would have to be created again from the refinery admin interface.  These are the sections.
-* Home - short text shown under the image rotator.  A "read more" link to "About" page is automatically added (see home.js)
+* Home - short text shown under the image rotator.  A "read more" link to "About" page should be included.
 * row_1 - First row of content boxes.  Currently each box describes a service offered. See below for more understanding how these work.
 * row_2 - Second row of content boxes. ''
 ==== Row formatting

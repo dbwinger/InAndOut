@@ -70,11 +70,12 @@ $medium_color: #A07A45;
 		font-size:12px;
 		line-height:20px;
 		position:relative;
-		background: #3c730c;
+		background: #538428;
+// Brighter green		background: #3c730c;
 //		background:#4d6800;
 
 //		@include linear-gradient(#9CcE39 50%, #7ace09);
-		color:#666;
+		color:#444;
 		padding:0 0 0 1px;
 	}
 
@@ -121,17 +122,17 @@ $medium_color: #A07A45;
 		z-index:2;
 		/* Added by daryl */
 		@include linear-gradient(#c0e1ff, #eeeeff);
-		height: 720px;
+		height: 750px;
 	}
 	.background_pic_holder {
-	    background-image:url('background-logo.png');
-	    @include background-size(1571px 771px);
-		background-position: -25px -50px;
-		height: 720px;
+	    background-image:url('background-logo-2.png');
+	    @include background-size(1700px 835px);
+		background-position: -80px -60px;
+		height: 750px;
 	}
 
     .grass {
-        background-image:url('grass2.png');
+        //background-image:url('grass2.png');
         height: 35px;
         width:100%;
         position:relative;
@@ -1791,7 +1792,7 @@ $medium_color: #A07A45;
 ------------------------------------------------------- */
 
 	#footer {
-		margin:50px auto 0 auto;
+		margin:20px auto 0 auto;
 		clear:both;
 		width:940px;
 		clear:both;
@@ -1801,13 +1802,14 @@ $medium_color: #A07A45;
 		text-align:center;
 		position:relative;
 		z-index:9;
+		color: #111;
 	}
 
 	/* footer copyright text */
 	#footer .copyright{
 		font-family: 'Droid Serif', Georgia, "Times New Roman", serif;
 		font-style: italic;
-		color:#a1a1a1;
+		color:#222;
 		margin:5px 0 0 0;
 	}
 
@@ -1816,7 +1818,7 @@ $medium_color: #A07A45;
 	/* footer links */
 	#footer  a{
 		text-decoration:none;
-		color:#848484;
+		color:#111;
 	}
 
 	#footer  a:hover{
@@ -1834,7 +1836,7 @@ $medium_color: #A07A45;
 		line-height:100%;
 		display:inline;
 		padding:0 7px ;
-		border-left:1px solid #848484;;
+		border-left:1px solid #333;
 	}
 
 	ul.footer_links li.first{

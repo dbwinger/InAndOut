@@ -1,0 +1,9 @@
+<ul class="footer_links">
+  <li class="first"><%= link_to "contact us", refinery.marketable_page_path("contact") %></li>
+  <li><%= link_to 'refinery', refinery.admin_root_path %></li>
+</ul>
+<div class="copyright">
+  <%= t('.copyright', :year => Time.now.year,
+                      :site_name => Refinery::Core.site_name) %>
+</div>
+

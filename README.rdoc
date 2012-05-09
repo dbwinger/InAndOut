@@ -17,6 +17,9 @@ This website is built on RefineryCMS.  Customizations, design, and other useful 
 * app/views/refinery/inquiries/inquiries/new.html.erb
 * app/views/refinery/inquiries/inquiry_mailer/notification.text.erb
 * config/locales/en.yml
+=== Search Engine
+I didn't want search results to include hidden pages (not shown in the menu), primarily because I've included user instructions on how to update things on the site in a hidden page.
+I made this modification in app/decorators/models/refinery/inquiries/inquiry_decorator.rb
 
 === Home page
 See the home page in app/views/refinery/pages/home.html.erb

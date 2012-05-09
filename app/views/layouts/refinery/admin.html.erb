@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% content_for :meta, "<meta refinerycms='#{Refinery.version}' />".html_safe %>
+  <%= render 'refinery/admin/head' %>
+  <body class="<%= action_name %> <%= I18n.locale %>">
+    <%= render '/refinery/site_bar' %>
+    <div id='tooltip_container'></div>
+    <header id="header">
+      <%= render 'refinery/admin/menu' %>
+    </header>
+    <div id="page_container">
+      <div id="page">
+        <div id="content" class="clearfix">
+          <div id="flash_container">
+            <%= render '/refinery/no_script' %>
+            <%= render '/refinery/message' %>
+          </div>
+          <div class="help" style="margin-bottom:15px; border: dashed 1px #4444bb; background-color: #eeF; padding: 6px; border-radius:5px; width:50%">
+            <%= image_tag("help.png", :style => "margin-bottom: -3px") %>
+            Forget how to do something?
+            <%= link_to "Try starting here.", refinery.marketable_page_path("how-to-update-my-website") %>
+          </div>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

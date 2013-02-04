@@ -9,30 +9,35 @@
 
 
   /* TWITTER */
-  var twitter_user_name = 'envatowebdesign'; //your twitter username
-  var tweet_count = 1; //number of tweets to show
+//  var twitter_user_name = 'envatowebdesign'; //your twitter username
+//  var tweet_count = 1; //number of tweets to show
 
 
-  /* CYCLE SLIDER */
+//  /* CYCLE SLIDER */
   var rttheme_slider_timeout=7000; //miliseconds 7000 = 7 seconds
   var rttheme_slider_effect="fade";
 
-  /* NIVO SLIDER */
-  var rttheme_nivo_slider_timeout=7000; //miliseconds 7000 = 7 seconds
+//  /* NIVO SLIDER */
+//  var _nivo_slider_timeout=7000; //miliseconds 7000 = 7 seconds
 
 /* ******************************************************************************* */
 
 
 
 // Navigation Menu
-jQuery(document).ready(function (){
+$(function (){
   //Usage
-  jQuery("#navigation ul li").menu({
-  	autohide: 0,
-	autostartSpeed: 0
+//  jQuery("#navigation ul li").menu({
+//  	autohide: 3,
+//  	autostartSpeed: 1
+//  });
+  $("#navigation ul>li>a+ul:visible").prev().addClass("active")
+  $("#navigation ul>li>a+ul:hidden").prev().addClass("inactive").parent().hover(function() {
+    $(">a", this).addClass("active").next().show("slide");
+  }, function() {
+    $(">a", this).addClass("inactive").removeClass("active").next().hide("slide");
   });
 });
-
 
 // Home Page Slider
 jQuery(document).ready(function(){
@@ -75,114 +80,114 @@ jQuery(document).ready(function(){
 });
 
 
-//Nivo Slider
-jQuery(document).ready(function(){
+////Nivo Slider
+//jQuery(document).ready(function(){
 
-	    if (jQuery('#nivo-slider').length>0){
-		   jQuery('#nivo-slider').nivoSlider({
-				pauseTime:rttheme_nivo_slider_timeout, // How long each slide will show
-				captionOpacity:1,
-				controlNav: false
-		    });
-	    }
+//	    if (jQuery('#nivo-slider').length>0){
+//		   jQuery('#nivo-slider').nivoSlider({
+//				pauseTime:rttheme_nivo_slider_timeout, // How long each slide will show
+//				captionOpacity:1,
+//				controlNav: false
+//		    });
+//	    }
 
-});
+//});
 
-//Photo Slider
-jQuery(document).ready(function(){
-    if (jQuery('.photo_gallery_cycle ul').length>0){
-        jQuery(".photo_gallery_cycle ul").cycle({
-            fx:     'fade',
-            timeout:  rttheme_slider_timeout,
-            pager:  '.slider_buttons',
-            cleartype:  1,
-            pause:           true,     // true to enable "pause on hover"
-            pauseOnPagerHover: true,   // true to pause when hovering over pager link
-                pagerAnchorBuilder: function(idx) {
-                    return '<a href="#" title=""><img src="assets/pixel.gif" width="8" heigth="8"></a>';
-                }
-        });
-    }
-});
+////Photo Slider
+//jQuery(document).ready(function(){
+//    if (jQuery('.photo_gallery_cycle ul').length>0){
+//        jQuery(".photo_gallery_cycle ul").cycle({
+//            fx:     'fade',
+//            timeout:  rttheme_slider_timeout,
+//            pager:  '.slider_buttons',
+//            cleartype:  1,
+//            pause:           true,     // true to enable "pause on hover"
+//            pauseOnPagerHover: true,   // true to pause when hovering over pager link
+//                pagerAnchorBuilder: function(idx) {
+//                    return '<a href="#" title=""><img src="assets/pixel.gif" width="8" heigth="8"></a>';
+//                }
+//        });
+//    }
+//});
 
 //pretty photo
-jQuery(document).ready(function(){
-        jQuery("a[rel^='prettyPhoto']").prettyPhoto({animationSpeed:'slow',theme:'light_rounded',slideshow:false,overlay_gallery: false,social_tools:false,deeplinking:false});
-});
+//jQuery(document).ready(function(){
+//        jQuery("a[rel^='prettyPhoto']").prettyPhoto({animationSpeed:'slow',theme:'light_rounded',slideshow:false,overlay_gallery: false,social_tools:false,deeplinking:false});
+//});
 
 
 
 // Tabs
-jQuery(function() {// perform JavaScript after the document is scriptable.
-    jQuery("ul.tabs").tabs("> .pane", {effect: 'fade'});
+//jQuery(function() {// perform JavaScript after the document is scriptable.
+//    jQuery("ul.tabs").tabs("> .pane", {effect: 'fade'});
 
-    jQuery(".accordion").tabs(".pane", {tabs: '.title', effect: 'slide'});
-    jQuery(".scrollable").scrollable();
-
-
-    jQuery(".items.big_image img").click(function() {
-
-       // see if same thumb is being clicked
-       if (jQuery(this).hasClass("active")) { return; }
-
-       // calclulate large image's URL based on the thumbnail URL (flickr specific)
-       var url = jQuery(this).attr("alt");
+//    jQuery(".accordion").tabs(".pane", {tabs: '.title', effect: 'slide'});
+//    jQuery(".scrollable").scrollable();
 
 
-       // get handle to element that wraps the image and make it semi-transparent
-       var wrap = jQuery("#image_wrap").fadeTo("medium", 0.5);
+//    jQuery(".items.big_image img").click(function() {
 
-       // the large image from www.flickr.com
-       var img = new Image();
+//       // see if same thumb is being clicked
+//       if (jQuery(this).hasClass("active")) { return; }
 
-
-       // call this function after it's loaded
-       img.onload = function() {
-
-          // make wrapper fully visible
-          wrap.fadeTo("fast", 1);
-
-          // change the image
-          wrap.find("img").attr("src", url);
-
-       };
-
-       // begin loading the image from www.flickr.com
-       img.src = url;
-
-       // activate item
-       jQuery(".items img").removeClass("active");
-       jQuery(this).addClass("active");
-
-    // when page loads simulate a "click" on the first image
-    }).filter(":first").click();
-
-});
-
-//RT Portfolio Effect
-jQuery(document).ready(function() {
-
-	var portfolio_item=jQuery("a.imgeffect");
+//       // calclulate large image's URL based on the thumbnail URL (flickr specific)
+//       var url = jQuery(this).attr("alt");
 
 
-		portfolio_item.each(function(){
-			var imageClass = jQuery(this).attr("class"); // get the class
-			var theImage = jQuery(this).html(); 	// save the image
-			jQuery(this).find("img").addClass("active");
-			jQuery(this).append('<span class="imagemask '+imageClass+'">'+theImage+'</span>'); //create new image within span
-			jQuery(this).find('span').parents('img').remove(); //remove image
-		});
+//       // get handle to element that wraps the image and make it semi-transparent
+//       var wrap = jQuery("#image_wrap").fadeTo("medium", 0.5);
 
-		jQuery('a.imgeffect .active').remove(); //remove image
+//       // the large image from www.flickr.com
+//       var img = new Image();
 
 
-	portfolio_item.mouseover(function(){
-		jQuery(this).find('img').stop().animate({ top:"-22px" }, 100, "easeIn");
-	}).mouseout(function(){
-		jQuery(this).find('img').stop().animate({ top:"0" }, 100, "easeIn");
-	});
+//       // call this function after it's loaded
+//       img.onload = function() {
 
-});
+//          // make wrapper fully visible
+//          wrap.fadeTo("fast", 1);
+
+//          // change the image
+//          wrap.find("img").attr("src", url);
+
+//       };
+
+//       // begin loading the image from www.flickr.com
+//       img.src = url;
+
+//       // activate item
+//       jQuery(".items img").removeClass("active");
+//       jQuery(this).addClass("active");
+
+//    // when page loads simulate a "click" on the first image
+//    }).filter(":first").click();
+
+//});
+
+////RT Portfolio Effect
+//jQuery(document).ready(function() {
+
+//	var portfolio_item=jQuery("a.imgeffect");
+
+
+//		portfolio_item.each(function(){
+//			var imageClass = jQuery(this).attr("class"); // get the class
+//			var theImage = jQuery(this).html(); 	// save the image
+//			jQuery(this).find("img").addClass("active");
+//			jQuery(this).append('<span class="imagemask '+imageClass+'">'+theImage+'</span>'); //create new image within span
+//			jQuery(this).find('span').parents('img').remove(); //remove image
+//		});
+
+//		jQuery('a.imgeffect .active').remove(); //remove image
+
+
+//	portfolio_item.mouseover(function(){
+//		jQuery(this).find('img').stop().animate({ top:"-22px" }, 100, "easeIn");
+//	}).mouseout(function(){
+//		jQuery(this).find('img').stop().animate({ top:"0" }, 100, "easeIn");
+//	});
+
+//});
 
 //validate contact form
 jQuery(document).ready(function(){
@@ -237,15 +242,15 @@ jQuery(function() {
 }
 
 /* Popoye Slider */
-jQuery(document).ready(function () {
-	var options = {
-	    caption:'hover',
-	    opacity:0.7,
-	    easing:'easeInBack',
-	    zindex:20000
-	}
-	jQuery('.ppy').popeye(options);
-});
+//jQuery(document).ready(function () {
+//	var options = {
+//	    caption:'hover',
+//	    opacity:0.7,
+//	    easing:'easeInBack',
+//	    zindex:20000
+//	}
+//	jQuery('.ppy').popeye(options);
+//});
 
 
 /* tool tips */
@@ -288,24 +293,24 @@ var form_inputs=jQuery(".showtextback input[type='text'], .showtextback textarea
 
 
 //Tweets
-$(document).ready(function(){
-  if ($('.tweet_list').length>0){
-    jQuery('.tweet_list').tweet({
-	 count: tweet_count,
-	 query: 'from:'+twitter_user_name+'',
-	 loading_text: 'Loading Tweets...'
-    });
-  }
-});
+//$(document).ready(function(){
+//  if ($('.tweet_list').length>0){
+//    jQuery('.tweet_list').tweet({
+//	 count: tweet_count,
+//	 query: 'from:'+twitter_user_name+'',
+//	 loading_text: 'Loading Tweets...'
+//    });
+//  }
+//});
 
-//Flickr
-$(document).ready(function(){
-    if ($('.flickr').length>0){
-	 jQuery(".flickr").jflickrfeed({
-		limit: flickr_thumbnail_count,
-		qstrings: {id: flickruserid},
-		itemTemplate: '<li><span class="frame"><a href="{{image_b}}"><img src="{{image_s}}" alt="{{title}}" /></a></span></li>'
-	 });
-    }
-});
+////Flickr
+//$(document).ready(function(){
+//    if ($('.flickr').length>0){
+//	 jQuery(".flickr").jflickrfeed({
+//		limit: flickr_thumbnail_count,
+//		qstrings: {id: flickruserid},
+//		itemTemplate: '<li><span class="frame"><a href="{{image_b}}"><img src="{{image_s}}" alt="{{title}}" /></a></span></li>'
+//	 });
+//    }
+//});
 

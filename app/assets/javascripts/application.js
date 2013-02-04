@@ -19,7 +19,6 @@
 //= require jquery.cycle.all.min
 //= require jquery.tools.min
 //= require jquery.prettyPhoto
-//= require menu_min
 //= require colortip-1.0-jquery
 //= require jquery.popeye-2.0.4.min
 //= require jquery.validate

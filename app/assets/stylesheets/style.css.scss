@@ -274,13 +274,13 @@ $medium_color: #A07A45;
 		display:block;
 	}
 
-	/* inacvtive - expandable items */
+	/* inactive - expandable items */
 	#navigation a.inactive{
 		background:url(plusminus.png) right 3px no-repeat;
 	}
 
-	/* acvtive - expanded items */
-	#navigation a.active{
+	/* active - expanded items */
+	#navigation a.active, #navigation a.inactive:hover {
 		background:url(plusminus.png) right -32px no-repeat;
 	}
 
@@ -292,6 +292,9 @@ $medium_color: #A07A45;
 	/* current page items and hover states */
 	#navigation ul li.selected a:hover, #navigation ul li.current-menu-ancestor a:hover{
 		color:#fff;
+	}
+	#navigation ul li.selected ul {
+	  display:block;
 	}
 
 	#navigation ul ul li.current-menu-item a{

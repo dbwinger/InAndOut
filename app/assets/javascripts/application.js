@@ -18,14 +18,10 @@
 //= require jquery.easing.1.3
 //= require jquery.cycle.all.min
 //= require jquery.tools.min
-//= require jquery.prettyPhoto
-//= require colortip-1.0-jquery
-//= require jquery.popeye-2.0.4.min
 //= require jquery.validate
 //= require jquery.form
-//= require jquery.tweet
 //= require jquery.nivo.slider.pack
-//= require jquery.color
+//= require colortip-1.0-jquery
 //= require script
 
 // END from ThemeForest theme

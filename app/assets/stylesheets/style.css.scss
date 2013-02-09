@@ -1,4 +1,5 @@
 @import "bourbon";
+
 /* ----------------------------------------------------
 
 	File Name: style.css
@@ -71,10 +72,6 @@ $medium_color: #A07A45;
 		line-height:20px;
 		position:relative;
 		background: #538428;
-// Brighter green		background: #3c730c;
-//		background:#4d6800;
-
-//		@include linear-gradient(#9CcE39 50%, #7ace09);
 		color:#444;
 		padding:0 0 0 1px;
 	}
@@ -188,7 +185,7 @@ $medium_color: #A07A45;
 		background:#343434;
 		padding:15px 30px 0 30px;
 	    margin-top: 18px;
-	    @include border-top-radius(3px);
+	    border-radius: 3px 3px 0 0;
 	    @include box-shadow(-8px 0px 12px -8px #111);
 	}
 
@@ -869,7 +866,7 @@ $medium_color: #A07A45;
 	#slider .desc{
 		position:absolute;
 		max-width:420px;
-		right:0;
+		right: 12px;
 		top:60px;
 		font-family: 'Oswald', arial, serif;
 	}
@@ -1036,7 +1033,7 @@ $medium_color: #A07A45;
 		display:inline;
 		float:left;
 		border:0;
-		@include border-radius(10px);
+		border-radius: 10px;
 		padding: 2px;
 	}
 
@@ -1948,8 +1945,6 @@ $medium_color: #A07A45;
 	/* buttons common */
 	a.button{
 		display:inline-block !important;
-		-moz-border-radius: 4px;
-		-webkit-border-radius: 4px;
 		border-radius: 4px;
 		padding: 0 15px;
 		text-decoration:none;
@@ -2043,8 +2038,6 @@ $medium_color: #A07A45;
 		position:relative;
 		outline: none;
 		padding:8px;
-		-moz-border-radius:4px;
-		-webkit-border-radius:4px;
 		border-radius:4px;
 		color:#8C8C8C;
 		background:#fff;
@@ -2181,8 +2174,6 @@ $medium_color: #A07A45;
 		margin:0 0 30px 0;
 		position:relative;
 		display:inline-block;
-		-moz-border-radius:10px;
-		-webkit-border-radius:10px;
 		border-radius:10px;
 		-moz-box-shadow: 0 4px 4px #CBCBCB;
 		-webkit-box-shadow: 0 4px 4px #CBCBCB;
@@ -2204,8 +2195,6 @@ $medium_color: #A07A45;
 		margin:0 0 30px 0;
 		position:relative;
 		display:inline-block;
-		-moz-border-radius:10px;
-		-webkit-border-radius:10px;
 		border-radius:10px;
 		-moz-box-shadow: 0 4px 4px #CBCBCB;
 		-webkit-box-shadow: 0 4px 4px #CBCBCB;
@@ -2450,14 +2439,14 @@ $medium_color: #A07A45;
 div.auto_columns img {
     width: 100%;
     border: solid 2px #ddd; /*#E8D593;*/
-    @include border-radius(6px);
+    border-radius: 6px;
 }
 div.auto_columns p {
     padding-bottom: 2px;
 }
 
 #slider .desc .text {
-    @include border-radius(6px);
+    border-radius: 6px;
 }
 
 // Clients list
@@ -2465,7 +2454,7 @@ div.clients {
     padding: 10px;
     border: solid 2px #ddd;
     background-color: #eee;
-    @include border-radius(8px);
+    border-radius: 8px;
     margin-bottom: 25px;
 }
 div.clients ul {
@@ -2483,5 +2472,49 @@ div.clients ul li {
 }
 div.clients ul li img {
     vertical-align: middle;
+}
+// FONTS
+
+/* Oswald */
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+/* Droid Sans */
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+/* Droid Serif */
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
+
+div.sidebar_content_top {
+    @include box-shadow(-8px 8px 12px -8px #111);
+    border-radius: 0 0 2px 2px;
+}
+
+#logo {
+    padding: 20px 0px 8px 30px;
+    @include linear-gradient(#ffffff, #c0e1ff);
+
+    a {
+        color: #452A15;
+        font-style: italic;
+        font-size: 21px;
+        text-decoration: none;
+
+        div {
+            margin: -6px 0 0 2px;
+        }
+    }
+    img {
+        width:180px;
+        height: 131px;
+    }
+}
+#tagline {
+    padding: 10px 0px;
+    background-color: #E6D391;
+    color: #452A15;
+    font-size: 21px;
+    text-align: center;
+    border-top: solid 5px #fff;
+    border-radius: 0 0 2px 2px;
 }
 

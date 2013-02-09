@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.11'
 
 group :development, :test do
     gem 'sqlite3'
     gem 'ruby-debug19', :require => 'ruby-debug'
+end
+
+group :development do
+  gem 'better_errors'
 end
 
 group :production do
@@ -31,11 +35,11 @@ gem 'jquery-rails'
 gem 'refinerycms', '~> 2.0.0'
 
 # Specify additional Refinery CMS Extensions here (all optional):
-gem 'refinerycms-i18n',   '~> 2.0.0'
-gem 'refinerycms-inquiries', '~> 2.0.0'
-gem 'refinerycms-page-images', '~> 2.0.0'
+gem 'refinerycms-i18n'
+gem 'refinerycms-inquiries'
+gem 'refinerycms-page-images'
 gem 'refinerycms-copywriting'
-gem 'refinerycms-search', '~> 2.0.0', :git => 'git://github.com/resolve/refinerycms-search.git', :branch => '2-0-stable'
+gem 'refinerycms-search'
 
 # The Heroku gem allows you to interface with Heroku's API
 gem 'heroku'

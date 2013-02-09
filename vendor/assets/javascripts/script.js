@@ -34,9 +34,9 @@ $(function (){
   $("#navigation ul>li>a+ul:visible").prev().addClass("active")
   $("#navigation ul>li>a+ul:hidden").prev().addClass("inactive").parent().hover(function() {
     $(">a", this).addClass("active").next().show("slide");
-  }, function() {
+  }/* Keep it shown, function() {
     $(">a", this).addClass("inactive").removeClass("active").next().hide("slide");
-  });
+  }*/);
 });
 
 // Home Page Slider

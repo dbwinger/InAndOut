@@ -867,51 +867,35 @@ $medium_color: #A07A45;
 		position:absolute;
 		max-width:420px;
 		right: 12px;
-		top:60px;
+		top:2px;
 		font-family: 'Oswald', arial, serif;
-	}
+		padding: 8px 10px 0px 10px;
+		border-radius: 3px;
 
-	/* columns common style */
-	#slider .desc span.title{
-		background:url(slider-text-background.png);
-		font-size:24px;
-		line-height:100%;
-		margin:0 0 10px 0;
-	}
+    h1, h2, h3, h4 {
+      padding: 0px;
+      color: rgb(230, 211, 145);
+    }
+	  /* description texts*/
+	  .text{
+		  padding:8px;
+		  font-size:14px;
+		  background:url(slider-text-background.png);
+		  text-decoration:none;
+		  display:block;
+	  }
 
-	/* title */
-	#slider .desc span.title, #slider .desc span.title a{
-		text-decoration:none;
-		color:#fff;
-		display:block;
-	}
+	  /* description links */
+	  span.text a{
+		  color:$medium_color;
+		  text-decoration:none;
+	  }
 
-	 #slider .desc span.title a,  #slider .desc span.title span{
-		padding:5px;
-		display:block;
-	}
-
-	/* description texts*/
-	#slider .desc span.text{
-		padding:5px;
-		font-size:14px;
-		background:url(slider-text-background.png);
-		text-decoration:none;
-		color:#fff;
-		display:block;
-	}
-
-	/* description links */
-	#slider .desc span.text a{
-		color:$medium_color;
-		text-decoration:none;
-	}
-
-	#slider .desc span.text a:hover, #slider .desc span.title a:hover{
-		background-color:$medium_color;
-		color:#fff !important;
-	}
-
+	  span.text a:hover, #slider .desc span.title a:hover{
+		  background-color:$medium_color;
+		  color:#fff !important;
+	  }
+  }
 
 	/* slider buttons*/
 	#numbers{

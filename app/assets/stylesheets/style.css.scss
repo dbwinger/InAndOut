@@ -224,6 +224,8 @@ $medium_color: #A07A45;
 		background:url(skin-default.png) right 0 no-repeat;
 		height:34px;
 		display:block;
+		// Otherwise shadow shows on top of it from content div.
+		position: relative
 	}
 
 	.content_top.no_curv{

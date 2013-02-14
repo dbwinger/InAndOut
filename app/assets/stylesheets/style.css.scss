@@ -668,14 +668,20 @@ $medium_color: #A07A45;
 		padding-left:25px !important;
 	}
 
-	.sidebar_content .contact_list .help{
-		background:url(assets/contact_icons/help.png) left 3px no-repeat;
-		padding-left:25px !important;
-	}
+//	.sidebar_content .contact_list .help{
+//		background:url(assets/contact_icons/help.png) left 3px no-repeat;
+//		padding-left:25px !important;
+//	}
 
 	.sidebar_content .contact_list .map{
 		background:url(assets/contact_icons/map.png) left 3px no-repeat;
 		padding-left:25px !important;
+	}
+
+	.sidebar_content .contact_list .facebook {
+	  background:url(assets/social_media/icon-facebook-16.png) left 3px no-repeat;
+		padding-left:25px !important;
+//		opacity: 0.3;
 	}
 
 	.sidebar_content .contact_list .fax{
@@ -683,10 +689,10 @@ $medium_color: #A07A45;
 		padding-left:25px !important;
 	}
 
-	.sidebar_content .contact_list .contact_form_icon{
-		background:url(assets/contact_icons/comment.png) left 3px no-repeat;
-		padding-left:25px !important;
-	}
+//	.sidebar_content .contact_list .contact_form_icon{
+//		background:url(assets/contact_icons/comment.png) left 3px no-repeat;
+//		padding-left:25px !important;
+//	}
 
 
 	/* contact list for content area */
@@ -746,24 +752,24 @@ $medium_color: #A07A45;
 	SOCIAL MEDIA ICONS
 ------------------------------------------------------- */
 
-	.sidebar_content ul.social_media_icons{
-		background:none;
-		display:inline-block;
-		margin:0 0 20px 0 !important;
-	}
+//	.sidebar_content ul.social_media_icons{
+//		background:none;
+//		display:inline-block;
+//		margin:0 0 20px 0 !important;
+//	}
 
-	.sidebar_content ul.social_media_icons li{
-		background:none;
-		list-style:none;
-		float:left;
-		margin:0 5px 0 0 !important;
-		padding:0;
-	}
+//	.sidebar_content ul.social_media_icons li{
+//		background:none;
+//		list-style:none;
+//		float:left;
+//		margin:0 5px 0 0 !important;
+//		padding:0;
+//	}
 
-	.sidebar_content .social_media_icons img{
-		opacity:0.3;
-		display:block;
-	}
+//	.sidebar_content .social_media_icons img{
+//		opacity:0.3;
+//		display:block;
+//	}
 
 
 /* ----------------------------------------------------

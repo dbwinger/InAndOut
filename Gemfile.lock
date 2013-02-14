@@ -59,7 +59,7 @@ GEM
       orm_adapter (~> 0.0.3)
       railties (~> 3.1)
       warden (~> 1.1.1)
-    dragonfly (0.9.13)
+    dragonfly (0.9.14)
       multi_json (~> 1.0)
       rack
     erubis (2.7.0)
@@ -109,7 +109,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.20.1)
-    multi_json (1.5.0)
+    multi_json (1.6.0)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.6.5)

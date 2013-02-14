@@ -2500,3 +2500,10 @@ div.sidebar_content_top {
     border-radius: 0 0 2px 2px;
 }
 
+ul.contact_list li {
+  &.phone, &.mail a {
+    font-weight: bold;
+    color: #ff3333;
+  }
+}
+

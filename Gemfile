@@ -48,5 +48,5 @@ gem 'heroku'
 gem 'fog'
 
 # For memcached
-gem 'dalli'
+# gem 'dalli'
 

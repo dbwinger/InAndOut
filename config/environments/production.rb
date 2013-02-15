@@ -46,13 +46,13 @@ InAndOut::Application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production
-  config.cache_store = :dalli_store
+#  config.cache_store = :dalli_store
 
-  config.action_dispatch.rack_cache = {
-    :metastore    => Dalli::Client.new,
-    :entitystore  => 'file:tmp/cache/rack/body',
-    :allow_reload => false
-  }
+#  config.action_dispatch.rack_cache = {
+#    :metastore    => Dalli::Client.new,
+#    :entitystore  => 'file:tmp/cache/rack/body',
+#    :allow_reload => false
+#  }
   config.action_controller.perform_caching = true
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server

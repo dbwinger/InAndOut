@@ -1,5 +1,6 @@
-<meta property="og:title" content="<%= @page.title %>" />
+<meta property="og:title" content="<%= yield(:title) %>" />
 <meta property="og:type" content="company" />
+<meta property="og:description" content="<%= @page.meta_description.blank? ? copywriting('facebook_description') : @page.meta_description %>">
 <meta property="og:url" content="<%= request.protocol + request.host_with_port + request.fullpath %>" />
 <meta property="og:image" content="http://www.inandoutcleaning.net/assets/logo-4b1d9c2e2a3fc2936e4c04fd91efff77.png" />
 <meta property="og:site_name" content="In &amp; Out Cleaning Services" />

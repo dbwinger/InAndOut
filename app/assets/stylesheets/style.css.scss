@@ -2512,4 +2512,11 @@ ul.contact_list li {
     color: #ff3333;
   }
 }
+.twitter-share-button, .fb-like, .g-plus1 {
+  float:left;
+  padding-right: 8px;
+}
+a.twitter-share-button {
+  visibility: hidden;
+}
 

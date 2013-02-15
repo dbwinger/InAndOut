@@ -2519,4 +2519,8 @@ ul.contact_list li {
 a.twitter-share-button {
   visibility: hidden;
 }
+.fb_iframe_widget_lift {
+  // Make sure it's above the rotating photos
+  z-index: 20;
+}
 

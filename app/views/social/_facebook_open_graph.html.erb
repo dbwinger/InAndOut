@@ -1,4 +1,4 @@
-<meta property="og:title" content="<%= yield(:title) %>" />
+<meta property="og:title" content="<%= browser_title(yield(:title)) %>" />
 <meta property="og:type" content="company" />
 <meta property="og:description" content="<%= @page.meta_description.blank? ? copywriting('facebook_description') : @page.meta_description %>">
 <meta property="og:url" content="<%= request.protocol + request.host_with_port + request.fullpath %>" />

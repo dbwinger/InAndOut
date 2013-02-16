@@ -65,7 +65,7 @@
 					      <li class="map"><%= link_to "map", "/contact" %></li>
 					      <li class="phone"><%= copywriting "phone" %></li>
 					      <li class="fax"><%= copywriting "fax" %></li>
-					      <li class="mail"><%= mail_to copywriting("email") %></li>
+					      <li class="mail"><%= mail_to copywriting("email").gsub("@"," at ").gsub(".", " dot "), "Click...", :class => "hover-show" %></li>
 					      <li class="facebook"><a href="https://www.facebook.com/InOutCleaningServices" title="Facebook">Follow us</a></li>
 					      <!--<li class="help"><a href="mailto:support@company.com">support@company.com</a></li>-->
 				      </ul>

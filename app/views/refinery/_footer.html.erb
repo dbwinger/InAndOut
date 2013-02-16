@@ -5,5 +5,7 @@
 <div class="copyright">
   <%= t('.copyright', :year => Time.now.year,
                       :site_name => Refinery::Core.site_name) %>
+  <br/>
+  Website built by <%= mail_to copywriting("webmaster_email", :default => "dbwinger@gmail.com").gsub("@"," at ").gsub(".", " dot "), copywriting("webmaster_name", :default => "Daryl Winger") %>
 </div>
 

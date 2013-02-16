@@ -28,7 +28,20 @@
 
 //= require_tree .
 
+function replaceSafeEmail(safeEmail) {
+  return safeEmail.replace(" at ", "@").replace(" dot ", ".");
+}
+
 $(function() {
    $("#body_content_title").addClass("line");
+
+   // All mailto links, replace with real email addresses on hover.
+   $("a[href ^='mailto:']").live("hover", function() {
+     $(this).attr("href", replaceSafeEmail($(this).attr("href")));
+     // Replace text with email address
+     if ($(this).hasClass("hover-show")) {
+      $(this).html($(this).attr("href").replace("mailto:",""));
+     }
+   });
 });
 

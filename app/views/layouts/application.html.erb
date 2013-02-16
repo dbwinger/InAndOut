@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <%= render '/refinery/html_tag' %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
-  <%= content_for :meta, render("/social/facebook_open_graph") %>
+  <%= content_for(:meta, render("/social/facebook_open_graph")) if @page %>
   <%= render '/refinery/head' %>
 
   <body class="default-skin">
-    <%= render "social/facebook_js_sdk" %>
+    <%= render("social/facebook_js_sdk") if @page %>
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="container">
@@ -110,7 +110,7 @@
 	        <div class="content">
 	          <!-- sub page top bar -->
 				    <div class="sub_page_top">
-				      <%= render "/social/share" %>
+				      <%= render("/social/share") if @page %>
 					    <!-- search -->
 					    <div class="search-bar">
 					      <%= render "refinery/shared/search" %>

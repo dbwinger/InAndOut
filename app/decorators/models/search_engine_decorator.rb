@@ -3,7 +3,7 @@ Refinery::SearchEngine.class_eval do
   # We're only searching pages, and we don't want ones not in menu (IE my instructions for Jake) to show up.
   def self.search(query, page = 1)
     if query.present?
-      Refinery::Page.where(:show_in_menu => true).limit(RESULTS_LIMIT).with_query(query)[0..(RESULTS_LIMIT) - 1]
+      Refinery::Page.where(:show_in_menu => true).limit(20).with_query(query)[0..19]
     else
       []
     end

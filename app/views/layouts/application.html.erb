@@ -93,7 +93,9 @@
 
 		      <div class="sidebar_bottom"></div><!-- curv for sidebar bottom -->
 		      <div class="below_sidebar">
-		        <%= link_to copywriting("apply_link_text", :default => "Application for employment"), copywriting("apply_page_title", :default => "Apply for Employment").parameterize %>
+		        <div class="link">
+		          <%= link_to copywriting("apply_link_text", :default => "Application for employment"), copywriting("apply_page_title", :default => "Apply for Employment").parameterize, :class => "page-icon" %>
+		        </div>
 		      </div>
 		    </div>
 		    <!--/ end div #sidebar -->

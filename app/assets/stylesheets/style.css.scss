@@ -2522,4 +2522,16 @@ ul.contact_list li {
   // Make sure it's above the rotating photos
   z-index: 20 !important;
 }
+.below_sidebar {
+  margin-top: 15px;
+  text-align:center;
+  a {
+    color: #333;
+    text-decoration: none;
+    &:hover {
+      color: #111;
+      text-decoration: underline;
+    }
+  }
+}
 

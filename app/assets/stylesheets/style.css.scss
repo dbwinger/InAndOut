@@ -2523,22 +2523,25 @@ ul.contact_list li {
   z-index: 20 !important;
 }
 .below_sidebar {
-  margin-top: 15px;
   text-align:center;
-  div.link {
-    padding: 3px 7px 3px 5px;
-    background-color: rgba(255,255,255, 0.2);
-    border-radius: 2px;
-    @include inline-block;
-    a {
-      color: #333;
-      &:hover {
-        color: #111;
-        text-decoration: underline;
-      }
-      &.page-icon {
-        background: url(/assets/refinery/icons/page.png) left no-repeat;
-        padding-left: 20px;
+
+  div {
+    margin-top: 25px;
+    &.link {
+      padding: 3px 7px 3px 5px;
+      background-color: rgba(255,255,255, 0.2);
+      border-radius: 2px;
+      @include inline-block;
+      a {
+        color: #333;
+        &:hover {
+          color: #111;
+          text-decoration: underline;
+        }
+        &.page-icon {
+          background: url(/assets/refinery/icons/page.png) left no-repeat;
+          padding-left: 20px;
+        }
       }
     }
   }

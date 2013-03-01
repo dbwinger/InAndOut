@@ -289,4 +289,3 @@ DEPENDENCIES
   thin
   turbo-sprockets-rails3
   uglifier (>= 1.0.3)
-

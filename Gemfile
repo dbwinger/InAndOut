@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.0.0'
 
-gem 'rails', '3.2.11'
+gem 'rails', '~> 3.2.15'
 
 group :development, :test do
     gem 'sqlite3'
-    gem 'ruby-debug19', :require => 'ruby-debug'
+    #gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :development do

@@ -156,7 +156,7 @@ GEM
       devise (~> 2.0.0)
       orm_adapter (~> 0.0.7)
       refinerycms-core (= 2.0.9)
-    refinerycms-copywriting (2.0.2)
+    refinerycms-copywriting (2.0.3)
     refinerycms-core (2.0.9)
       acts_as_indexed (~> 0.7.7)
       awesome_nested_set (~> 2.1.3)

@@ -2,13 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'rails', '~> 3.2.15'
+gem 'rails', '~> 3.2.18'
 gem 'passenger'
-
-group :development, :test do
-    gem 'sqlite3'
-    #gem 'ruby-debug19', :require => 'ruby-debug'
-end
 
 group :development do
   gem 'better_errors'
@@ -45,9 +40,6 @@ gem 'refinerycms-inquiries'
 gem 'refinerycms-page-images'
 gem 'refinerycms-copywriting'
 gem 'refinerycms-search'
-
-# The Heroku gem allows you to interface with Heroku's API
-gem 'heroku'
 
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'

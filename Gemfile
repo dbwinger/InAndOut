@@ -4,6 +4,7 @@ ruby '2.0.0'
 
 gem 'rails', '~> 3.2.18'
 gem 'passenger'
+gem 'lograge'
 
 group :development do
   gem 'better_errors'
@@ -46,4 +47,3 @@ gem 'fog'
 
 # For memcached
 # gem 'dalli'
-

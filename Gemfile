@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.2'
 
 gem 'rails', '~> 3.2.18'
 gem 'passenger'
@@ -36,11 +36,11 @@ gem 'jquery-rails'
 gem 'refinerycms', '~> 2.0.0'
 
 # Specify additional Refinery CMS Extensions here (all optional):
-gem 'refinerycms-i18n'
-gem 'refinerycms-inquiries'
-gem 'refinerycms-page-images'
-gem 'refinerycms-copywriting'
-gem 'refinerycms-search'
+gem 'refinerycms-i18n', '~> 2.0.0'
+gem 'refinerycms-inquiries', github: 'refinery/refinerycms-inquiries', branch: '2-0-stable'
+gem 'refinerycms-page-images', '~> 2.0.0'
+gem 'refinerycms-copywriting', '~> 2.0.0'
+gem 'refinerycms-search', '~> 2.0.0'
 
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'

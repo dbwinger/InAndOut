@@ -8,6 +8,7 @@ gem 'lograge'
 
 group :development do
   gem 'better_errors'
+  gem 'letter_opener'
 end
 
 group :production do

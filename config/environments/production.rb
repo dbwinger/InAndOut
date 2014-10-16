@@ -14,8 +14,8 @@ InAndOut::Application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   # Enbled per https://devcenter.heroku.com/articles/rack-cache-memcached-static-assets-rails31 because of using Memcached
-#  config.serve_static_assets = true
-#  config.static_cache_control = "public, max-age=2592000"
+  #  config.serve_static_assets = true
+  #  config.static_cache_control = "public, max-age=2592000"
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -46,13 +46,13 @@ InAndOut::Application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production
-#  config.cache_store = :dalli_store
+  #  config.cache_store = :dalli_store
 
-#  config.action_dispatch.rack_cache = {
-#    :metastore    => Dalli::Client.new,
-#    :entitystore  => 'file:tmp/cache/rack/body',
-#    :allow_reload => false
-#  }
+  #  config.action_dispatch.rack_cache = {
+  #    :metastore    => Dalli::Client.new,
+  #    :entitystore  => 'file:tmp/cache/rack/body',
+  #    :allow_reload => false
+  #  }
   config.action_controller.perform_caching = true
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
@@ -79,5 +79,7 @@ InAndOut::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   config.lograge.enabled = true
+  config.lograge.custom_options = lambda do |event|
+    {params: event.payload[:params].except('controller', 'action', 'format')} #exclude redundant params
+  end
 end
-

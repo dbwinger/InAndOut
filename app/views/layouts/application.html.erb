@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <%= render '/refinery/html_tag' %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
-  <%= content_for(:meta, render("/social/facebook_open_graph")) if @page %>
+  <%= content_for(:meta) do %>
+    <%= render("/social/facebook_open_graph") if @page %>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+  <% end %>
   <%= render '/refinery/head' %>
 
   <body class="default-skin">
@@ -143,4 +146,3 @@
     <%= render '/refinery/javascripts' %>
   </body>
 </html>
-

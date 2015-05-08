@@ -1,5 +1,7 @@
 @import "bourbon";
 
+$screen-phone: 800px;
+
 /* ----------------------------------------------------
 
 	File Name: style.css
@@ -86,6 +88,11 @@ $medium_color: #A07A45;
 		padding:30px 0;
 		border:0 !important;
 	}
+	@media (max-width: $screen-phone) {
+		#container {
+			padding: 1%;
+		}
+	}
 
 	/* Layout general*/
 	#wrapper{
@@ -96,6 +103,10 @@ $medium_color: #A07A45;
 		padding:0;
 		border:0 !important;
 		z-index:4;
+	}
+
+	@media (max-width: $screen-phone) {
+		#wrapper { width: auto; }
 	}
 
 	/* background border */
@@ -167,12 +178,21 @@ $medium_color: #A07A45;
 		margin:0 20px 0 0 ;
 		float:left;
 	}
+	@media (max-width: $screen-phone) {
+		#sidebar {
+			width: 98%;
+		}
+	}
 
 	.sidebar_top{
 		margin:8px 0 0 0;
 		background:url(skin-custom.png) left 0px no-repeat;
 		height:26px;
 		display:block;
+	}
+
+	@media (max-width: $screen-phone) {
+		.sidebar_top { display: none; }
 	}
 
 	/* sidebar background color */
@@ -195,10 +215,22 @@ $medium_color: #A07A45;
 		display:block;
 	}
 
+	@media (max-width: $screen-phone) {
+		.sidebar_bottom { display: none; }
+	}
+
 	/* content holder */
 	#content{
 		float:left;
 		width:700px;
+	}
+
+	@media screen and (max-width: $screen-phone) {
+		#content {
+			width: 98%;
+			float: none;
+			clear: left;
+		}
 	}
 
 	/* content holder */
@@ -900,6 +932,10 @@ $medium_color: #A07A45;
 		  color:#fff !important;
 	  }
   }
+
+	@media (max-width: $screen-phone) {
+		#slider .desc { right: 38px; }
+	}
 
 	/* slider buttons*/
 	#numbers{
@@ -2423,34 +2459,34 @@ $medium_color: #A07A45;
 /* ---------------------------------------------------------
    Added by DARYL
 ------------------------------------------------------------*/
-// Auto-columns
-div.auto_columns img {
+	// Auto-columns
+	div.auto_columns img {
     width: 100%;
     height: auto;
     border: solid 2px #ddd; /*#E8D593;*/
     border-radius: 6px;
-}
-div.auto_columns p {
+	}
+	div.auto_columns p {
     padding-bottom: 2px;
-}
+	}
 
-#slider .desc .text {
+	#slider .desc .text {
     border-radius: 6px;
-}
+	}
 
-// Clients list
-div.clients {
+	// Clients list
+	div.clients {
     padding: 10px;
     border: solid 2px #ddd;
     background-color: #eee;
     border-radius: 8px;
     margin-bottom: 25px;
-}
-div.clients ul {
+	}
+	div.clients ul {
     list-style: none !important;
     background-color: #aaa;
-}
-div.clients ul li {
+	}
+	div.clients ul li {
     float:left;
     list-style-position: outside !important;
     margin: 0 6px;
@@ -2458,46 +2494,50 @@ div.clients ul li {
     width: 184px;
     text-align: center;
     line-height: 65px;
-}
-div.clients ul li img {
+	}
+	div.clients ul li img {
     vertical-align: middle;
-}
-// FONTS
+	}
+	// FONTS
 
-/* Oswald */
-@import url(http://fonts.googleapis.com/css?family=Oswald);
+	/* Oswald */
+	@import url(http://fonts.googleapis.com/css?family=Oswald);
 
-/* Droid Sans */
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+	/* Droid Sans */
+	@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
-/* Droid Serif */
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
+	/* Droid Serif */
+	@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
 
-div.sidebar_content_top {
+	div.sidebar_content_top {
     @include box-shadow(-8px 8px 12px -8px #111);
     border-radius: 0 0 2px 2px;
-}
+	}
 
-#logo {
+	#logo {
     padding: 20px 0px 8px 30px;
     @include linear-gradient(#ffffff, #c0e1ff);
-
     a {
-        color: #452A15;
-        font-style: italic;
-        font-size: 21px;
-        text-decoration: none;
+      color: #452A15;
+      font-style: italic;
+      font-size: 21px;
+      text-decoration: none;
 
-        div {
-            margin: -6px 0 0 2px;
-        }
+      div {
+        margin: -6px 0 0 2px;
+      }
     }
     img {
-        width:180px;
-        height: 131px;
+      width:180px;
+      height: 131px;
     }
-}
-#tagline {
+	}
+
+	@media (max-width: $screen-phone) {
+		#logo { text-align: center; }
+	}
+
+	#tagline {
     padding: 10px 0px;
     background-color: #E6D391;
     color: #452A15;
@@ -2505,46 +2545,45 @@ div.sidebar_content_top {
     text-align: center;
     border-top: solid 5px #fff;
     border-radius: 0 0 2px 2px;
-}
+	}
 
-ul.contact_list li {
-  &.phone, &.mail a {
-    font-weight: bold;
-    color: #ff3333;
-  }
-}
-.twitter-share-button, .fb-like, .g-plus1 {
-  float:left;
-  padding-right: 8px;
-}
-#tw { visibility: hidden !important; }
+	ul.contact_list li {
+	  &.phone, &.mail a {
+	    font-weight: bold;
+	    color: #ff3333;
+	  }
+	}
+	.twitter-share-button, .fb-like, .g-plus1 {
+	  float:left;
+	  padding-right: 8px;
+	}
+	#tw { visibility: hidden !important; }
 
-.fb_iframe_widget_lift {
-  // Make sure it's above the rotating photos
-  z-index: 20 !important;
-}
-.below_sidebar {
-  text-align:center;
+	.fb_iframe_widget_lift {
+	  // Make sure it's above the rotating photos
+	  z-index: 20 !important;
+	}
+	.below_sidebar {
+	  text-align:center;
 
-  div {
-    margin-top: 25px;
-    &.link {
-      padding: 3px 7px 3px 5px;
-      background-color: rgba(255,255,255, 0.2);
-      border-radius: 2px;
-      @include inline-block;
-      a {
-        color: #333;
-        &:hover {
-          color: #111;
-          text-decoration: underline;
-        }
-        &.page-icon {
-          background: url(/assets/refinery/icons/page.png) left no-repeat;
-          padding-left: 20px;
-        }
-      }
-    }
-  }
-}
-
+	  div {
+	    margin-top: 25px;
+	    &.link {
+	      padding: 3px 7px 3px 5px;
+	      background-color: rgba(255,255,255, 0.2);
+	      border-radius: 2px;
+	      @include inline-block;
+	      a {
+	        color: #333;
+	        &:hover {
+	          color: #111;
+	          text-decoration: underline;
+	        }
+	        &.page-icon {
+	          background: url(/assets/refinery/icons/page.png) left no-repeat;
+	          padding-left: 20px;
+	        }
+	      }
+	    }
+	  }
+	}

@@ -9,6 +9,11 @@ gem 'lograge'
 group :development do
   gem 'better_errors'
   gem 'letter_opener'
+  gem 'binding_of_caller'
+end
+
+group :development, :test do
+  gem 'byebug'  
 end
 
 group :production do
@@ -21,7 +26,8 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails'#,   '~> 3.2.3'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass', '~> 3.2.13'
   gem 'bourbon'
   #gem 'coffee-rails', '~> 3.2.1'
 

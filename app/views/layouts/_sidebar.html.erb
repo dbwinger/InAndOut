@@ -1,0 +1,79 @@
+<!-- sidebar -->
+<div id="sidebar">
+  <div class="sidebar_top"></div><!-- curv for sidebar top -->
+  <div class="sidebar_content_top">
+    <!-- logo -->
+    <div id="logo">
+      <%= link_to refinery.root_path do %>
+        <%= image_tag "logo.png", :width => "100%", :alt => "In & Out Cleaning Services logo", :class => "png" %>
+        <div>cleaning services</div>
+      <%end%>
+    </div>
+    <!-- / end logo -->
+    <div class="tagline">
+      reliable
+      <strong>excellence.</strong>
+    </div>
+  </div>
+  <!-- / end sidebar_content_top -->
+
+  <!-- sidebar contents -->
+  <div class="sidebar_content">
+
+    <div class="clear"></div>
+    <!-- Navigation -->
+    <%= render(:partial => "/refinery/menu", :locals => {
+         :dom_id => 'navigation',
+         :css => 'menu'
+       }) %>
+
+    <!-- Contact Info Widget -->
+    <div class="box widget">
+
+      <!-- widget title-->
+      <h4><%= link_to "GET IN TOUCH", "/contact" %></h4>
+
+      <!-- info list -->
+      <ul class="contact_list">
+        <li class="home"><%= (copywriting("address") || "").html_safe %></li>
+        <li class="map"><%= link_to "map", "/contact" %></li>
+        <li class="phone"><%= copywriting "phone" %></li>
+        <li class="fax"><%= copywriting "fax" %></li>
+        <li class="mail"><%= mail_to copywriting("email").gsub("@"," at ").gsub(".", " dot "), "Email...", :class => "hover-show" %></li>
+        <li class="facebook"><a href="https://www.facebook.com/InOutCleaningServices" title="Facebook">Follow us</a></li>
+        <!--<li class="help"><a href="mailto:support@company.com">support@company.com</a></li>-->
+      </ul>
+    </div>
+    <!-- / Contact Info Widget -->
+
+    <% if copywriting "testimonial" %>
+      <div class="box dynamic_sidebar widget">
+        <!-- widget title-->
+        <h4>Testimonial</h4>
+
+        <blockquote>
+          <p style="padding:0">
+            <%= copywriting "testimonial" %>
+            <span ><%= copywriting "testimonial-author"%></span>
+          </p>
+        </blockquote>
+        <%= link_to "read more →", "/about-us/testimonials", :class => "read_more", :style => "padding:0; text-align:right" %>
+      </div>
+      <br/>
+    <%end%>
+    <div class="clear"></div>
+  </div>
+  <!--/ end div .sidebar contents -->
+
+  <div class="sidebar_bottom"></div><!-- curv for sidebar bottom -->
+  <div class="below_sidebar">
+    <div class="link">
+      <%= link_to copywriting("apply_link_text", :default => "Application for employment"), copywriting("apply_page_title", :default => "Apply for Employment").parameterize, :class => "page-icon" %>
+    </div>
+    <div class="cc">
+      We accept all major credit cards.
+      <%= image_tag("cc.gif") %>
+    </div>
+  </div>
+</div>
+<!--/ end div #sidebar -->

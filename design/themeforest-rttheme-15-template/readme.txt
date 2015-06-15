@@ -1,1 +1,0 @@
-Please open the index.html where in Documentation folder with your browser to read the help file. 

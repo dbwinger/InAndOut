@@ -22,12 +22,18 @@
 //= require jquery.form
 //= require jquery.nivo.slider.pack
 //= require colortip-1.0-jquery
+//= require menu_min
 //= require script
 
 // END from ThemeForest theme
 
 //= require_tree .
 
+var rttheme_slider_timeout = 7000; //miliseconds 7000 = 7 seconds
+var rttheme_slider_effect = "fade";
+var rttheme_template_dir = "/assets";
+  
+  
 function replaceSafeEmail(safeEmail) {
   return safeEmail.replace(" at ", "@").replace(" dot ", ".");
 }
@@ -42,6 +48,16 @@ $(function() {
      if ($(this).hasClass("hover-show")) {
       $(this).html($(this).attr("href").replace("mailto:",""));
      }
+   });
+
+   // Navigate on dropdown change
+   $('#dropdown_nav').change(function() {
+     window.location.href = $('#dropdown_nav').val();
+   });
+
+   $("#navigation ul>li>a+ul:visible").prev().addClass("active")
+   $("#navigation ul>li>a+ul:hidden").prev().addClass("inactive").parent().hover(function() {
+     $(">a", this).addClass("active").next().show("slide");
    });
 });
 

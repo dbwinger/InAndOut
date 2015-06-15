@@ -1,0 +1,284 @@
+@import "bourbon";
+
+/* body */
+body {
+  font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+  font-size:12px;
+  line-height:20px;
+  position:relative;
+  background: #538428;
+  color:#444;
+}
+
+// Auto-columns
+div.auto_columns img {
+  width: 100%;
+  height: auto;
+  border: solid 2px #ddd; /*#E8D593;*/
+  border-radius: 6px;
+}
+@media only screen and (max-width: 767px) {
+  div.box { text-align: center; }
+  div.auto_columns img {
+    width: auto;
+    max-width: 100%;
+  }
+  .featured p { text-align: left; }
+}
+div.auto_columns p {
+  padding-bottom: 2px;
+}
+
+#slider .desc .text {
+  border-radius: 6px;
+}
+
+// Clients list
+div.clients {
+  padding: 10px;
+  border: solid 2px #ddd;
+  background-color: #eee;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+div.clients ul {
+  list-style: none !important;
+  background-color: #aaa;
+  li {
+    float:left;
+    list-style-position: outside !important;
+    margin: 0 6px;
+    height: 65px;
+    width: 184px;
+    text-align: center;
+    line-height: 65px;
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  div.clients ul li {
+    width: 140px;
+    img { max-width: 100px; }
+  }
+}
+
+
+.google-maps {
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+// FONTS
+
+/* Oswald */
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+/* Droid Sans */
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+/* Droid Serif */
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
+
+.background_pic_gradient {
+  @include linear-gradient(#c0e1ff, #eeeeff);
+  height: 750px;
+}
+.background_pic_holder {
+  background-image:url('background-logo-2.png');
+  @include background-size(1700px 835px);
+  background-position: -80px -60px;
+  max-height: none;
+  height: 750px;
+}
+
+.grass {
+  height: 35px;
+  width:100%;
+  position:relative;
+  top:-28px;
+  z-index:99;
+  @include background-size(170px 35px);
+}
+
+.sidebar_top{
+  margin:8px 0 0 0;
+  background:url(skin-custom.png) left 0px no-repeat;
+  height:26px;
+  display:block;
+}
+
+div.sidebar_content_top {
+  @include box-shadow(-8px 8px 12px -8px #111);
+  @include linear-gradient(#ffffff, #c0e1ff);
+  border-radius: 0 0 2px 2px;
+}
+
+#logo {
+  padding: 20px 0px 8px 30px;
+  a {
+    color: #452A15;
+    font-style: italic;
+    font-size: 21px;
+    text-decoration: none;
+
+    div {
+      margin: -6px 0 0 2px;
+    }
+  }
+  img {
+    width:180px;
+    height: 131px;
+  }
+}
+
+.tagline {
+  padding: 10px 0px;
+  background-color: #E6D391;
+  color: #452A15;
+  font-size: 21px;
+  text-align: center;
+  border-top: solid 5px #fff;
+  border-radius: 0 0 2px 2px;
+}
+
+ul.contact_list li {
+  &.phone, &.mail a {
+    font-weight: bold;
+    color: #ff3333;
+  }
+}
+.twitter-share-button, .fb-like, .g-plus1 {
+  float:left;
+  padding-right: 8px;
+}
+#tw { visibility: hidden !important; }
+
+.fb_iframe_widget_lift {
+  // Make sure it's above the rotating photos
+  z-index: 20 !important;
+}
+
+.sidebar_content{
+  //background:#343434;
+  padding:15px 30px 0 30px;
+  margin-top: 18px;
+  border-radius: 3px 3px 0 0;
+  @include box-shadow(-8px 0px 12px -8px #111);
+}
+
+.below_sidebar {
+  text-align:center;
+
+  div {
+    margin-top: 25px;
+    &.link {
+      padding: 3px 7px 3px 5px;
+      background-color: rgba(255,255,255, 0.2);
+      border-radius: 2px;
+      @include inline-block;
+      a {
+        color: #333;
+        &:hover {
+          color: #111;
+          text-decoration: underline;
+        }
+        &.page-icon {
+          background: url(/assets/refinery/icons/page.png) left no-repeat;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+.content_top{
+  background:url(skin-default.png) right 0 no-repeat;
+  height:34px;
+  display:block;
+  // Otherwise shadow shows on top of it from content div.
+  position: relative
+}
+
+// Remove line on top of sidebar menu
+#navigation > ul { 
+  background: none !important;
+  border: none;
+}
+
+.field { margin-top: 12px; }
+
+// Responsive
+
+#mobile_header {
+  @include linear-gradient(#ffffff, #c0e1ff);
+  padding: 0px;
+  a {
+    color: #452A15;
+    font-style: italic;
+    font-size: 21px;
+    text-decoration: none;
+
+    div {
+      margin: -6px 0 0 2px;
+    }
+  }
+
+  #mobile_logo {
+    padding: 8px 0;
+    img { width: 180px; }
+  }
+}
+
+#mobile_menu {
+  text-align: center;
+  background: #333;
+  padding: 10px;
+  #dropdown_nav { 
+    max-width: 100%;
+  }
+}
+.brown { display: none; }
+
+@media only screen and (max-width: 767px) {
+  #wrapper { 
+    
+  }
+  .background_pic_holder { 
+    background: #777; 
+  }
+  .brown { 
+    display: block;
+    height: 200px;
+    background: #936D4C;  
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .content_top { display: none; }
+  #mobile_header, #content, #sidebar > div:not(.below_sidebar), #content > .content  {
+    @include box-shadow(0px 0px 33px -4px #111);
+    border-radius: 5px;
+  }
+
+  #content { 
+    margin-top: 20px;
+    .content { 
+      padding-top: 20px; 
+      padding-bottom: 20px;
+    }
+  }
+  .content textarea { 
+    width: 95%;
+  }
+  #sidebar .tagline { display: none; }
+}

@@ -5,6 +5,7 @@ ruby '2.1.2'
 gem 'rails', '~> 3.2.21'
 gem 'passenger'
 gem 'lograge'
+gem 'rails_12factor'
 
 group :development do
   gem 'better_errors'
